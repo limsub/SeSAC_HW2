@@ -37,6 +37,11 @@ class ViewController: UIViewController {
     
     
     @IBAction func thirdButtonTapped(_ sender: UIButton) {
+        
+        let vc = Ex3ViewController()
+        
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
 

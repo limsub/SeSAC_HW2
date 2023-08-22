@@ -17,6 +17,8 @@
 		4869F9342A949CFA00BA3517 /* Ex1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869F9332A949CFA00BA3517 /* Ex1ViewController.swift */; };
 		4869F9362A94A36A00BA3517 /* Ex2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869F9352A94A36A00BA3517 /* Ex2ViewController.swift */; };
 		4869F9392A94ADCA00BA3517 /* Extension+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869F9382A94ADCA00BA3517 /* Extension+Button.swift */; };
+		4869F93B2A94B1FA00BA3517 /* Ex3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869F93A2A94B1FA00BA3517 /* Ex3ViewController.swift */; };
+		4869F93D2A94CFA100BA3517 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869F93C2A94CFA100BA3517 /* PaddingLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		4869F9332A949CFA00BA3517 /* Ex1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex1ViewController.swift; sourceTree = "<group>"; };
 		4869F9352A94A36A00BA3517 /* Ex2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex2ViewController.swift; sourceTree = "<group>"; };
 		4869F9382A94ADCA00BA3517 /* Extension+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Button.swift"; sourceTree = "<group>"; };
+		4869F93A2A94B1FA00BA3517 /* Ex3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex3ViewController.swift; sourceTree = "<group>"; };
+		4869F93C2A94CFA100BA3517 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 			children = (
 				4869F9332A949CFA00BA3517 /* Ex1ViewController.swift */,
 				4869F9352A94A36A00BA3517 /* Ex2ViewController.swift */,
+				4869F93A2A94B1FA00BA3517 /* Ex3ViewController.swift */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				4869F9382A94ADCA00BA3517 /* Extension+Button.swift */,
+				4869F93C2A94CFA100BA3517 /* PaddingLabel.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -174,6 +180,8 @@
 				4869F9362A94A36A00BA3517 /* Ex2ViewController.swift in Sources */,
 				4869F9202A949C3A00BA3517 /* ViewController.swift in Sources */,
 				4869F91C2A949C3A00BA3517 /* AppDelegate.swift in Sources */,
+				4869F93B2A94B1FA00BA3517 /* Ex3ViewController.swift in Sources */,
+				4869F93D2A94CFA100BA3517 /* PaddingLabel.swift in Sources */,
 				4869F9392A94ADCA00BA3517 /* Extension+Button.swift in Sources */,
 				4869F91E2A949C3A00BA3517 /* SceneDelegate.swift in Sources */,
 				4869F9342A949CFA00BA3517 /* Ex1ViewController.swift in Sources */,
