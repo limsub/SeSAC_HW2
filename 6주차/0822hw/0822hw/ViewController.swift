@@ -20,7 +20,10 @@ class ViewController: UIViewController {
     
     @IBAction func firstButtonTapped(_ sender: UIButton) {
         
-        let vc = Ex1ViewController()
+//        let vc = Ex1ViewController()
+        
+        let vc = ButtonTestViewController()
+        vc.modalPresentationStyle = .fullScreen
         
         present(vc, animated: true)
     }

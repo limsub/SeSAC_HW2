@@ -113,12 +113,13 @@ class Ex3ViewController: UIViewController {
     }
     
     
-//    let safeArea = view.safeAreaLayoutGuide
+    
 //    lazy var safeArea = view.safeAreaLayoutGuide
-
+//    let safeArea = view.safeAreaLayoutGuide
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         
         
         view.backgroundColor = .white
