@@ -28,6 +28,11 @@ class ViewController: UIViewController {
     
     
     @IBAction func secondButtonTapped(_ sender: UIButton) {
+        
+        let vc = Ex2ViewController()
+        
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     
