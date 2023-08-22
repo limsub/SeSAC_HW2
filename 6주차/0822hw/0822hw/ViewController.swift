@@ -8,12 +8,32 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    
+    @IBAction func firstButtonTapped(_ sender: UIButton) {
+        
+        let vc = Ex1ViewController()
+        
+        present(vc, animated: true)
+    }
+    
+    
+    
+    @IBAction func secondButtonTapped(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func thirdButtonTapped(_ sender: UIButton) {
+    }
+    
 
 }
 
