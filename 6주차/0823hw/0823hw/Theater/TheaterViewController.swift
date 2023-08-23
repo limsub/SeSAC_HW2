@@ -29,6 +29,7 @@ import SnapKit
     // 허용 -> 사용자의 위치로 포커스
     // 거부 -> alert으로 설정 창 유도
 
+// 3. 영화관 어노테이션
 
 class TheaterViewController: UIViewController {
     
@@ -58,6 +59,8 @@ class TheaterViewController: UIViewController {
         
         return button
     }()
+    
+    let theaterList = TheaterList().mapAnnotations
 
     
     
@@ -75,12 +78,15 @@ class TheaterViewController: UIViewController {
         mapView.delegate = self
         locationManager.delegate = self
 
+        // 전체 영화관 어노테이션
+        setAnnotation("전체보기")
         
         // 시작
         checkDeviceLocationAuthorization()
         
         // 버튼 연결
         locationButton.addTarget(self, action: #selector(locationButtonClicked), for: .touchUpInside)
+        filterButton.addTarget(self, action: #selector(filterButtonClicked), for: .touchUpInside)
     }
     
     
@@ -140,6 +146,31 @@ extension TheaterViewController {
     @objc
     func filterButtonClicked() {
         
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let mega = UIAlertAction(title: "메가박스", style: .default) { _ in
+            self.setAnnotation("메가박스")
+        }
+        let lotte = UIAlertAction(title: "롯데시네마", style: .default) { _ in
+            self.setAnnotation("롯데시네마")
+        }
+        let cgv = UIAlertAction(title: "CGV", style: .default) { _ in
+            self.setAnnotation("CGV")
+        }
+        let all = UIAlertAction(title: "전체보기", style: .default) { _ in
+            self.setAnnotation("전체보기")
+        }
+        
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        
+        actionSheet.addAction(mega)
+        actionSheet.addAction(lotte)
+        actionSheet.addAction(cgv)
+        actionSheet.addAction(all)
+        
+        actionSheet.addAction(cancel)
+        
+        present(actionSheet, animated: true)
     }
     
     
@@ -148,6 +179,44 @@ extension TheaterViewController {
 
 // 커스텀 함수 선언
 extension TheaterViewController {
+    
+    // annotation
+    func setAnnotation(_ sender: String) {
+        
+        // 일단 다 지우고
+        mapView.removeAnnotations(mapView.annotations)
+        
+        // 추가
+            // 전체보기 -> 리스트 모두 추가
+            // else -> sender(String)과 같은 요소만 추가
+        if (sender == "전체보기") {
+            theaterList.forEach { item in
+                let anno = MKPointAnnotation()
+                
+                anno.title = item.location
+                anno.coordinate = CLLocationCoordinate2D(latitude: item.latitude, longitude: item.longitude)
+                
+                mapView.addAnnotation(anno)
+            }
+        }
+        
+        else {
+            theaterList.forEach { item in
+                
+                if (item.type == sender) {
+                    let anno = MKPointAnnotation()
+                    
+                    anno.title = item.location
+                    anno.coordinate = CLLocationCoordinate2D(latitude: item.latitude, longitude: item.longitude)
+                    
+                    mapView.addAnnotation(anno)
+                }
+                
+            }
+            
+        }
+    }
+    
     
     // 권한 설정 여부
     func checkDeviceLocationAuthorization() {

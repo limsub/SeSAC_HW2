@@ -15,6 +15,7 @@
 		4869F95A2A95CAE200BA3517 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4869F9582A95CAE200BA3517 /* LaunchScreen.storyboard */; };
 		4869F9632A95D4B400BA3517 /* TheaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869F9622A95D4B400BA3517 /* TheaterViewController.swift */; };
 		4869F9662A95DA3F00BA3517 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4869F9652A95DA3F00BA3517 /* SnapKit */; };
+		4869F9682A95EA1800BA3517 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869F9672A95EA1800BA3517 /* About.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		4869F9592A95CAE200BA3517 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4869F95B2A95CAE200BA3517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4869F9622A95D4B400BA3517 /* TheaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterViewController.swift; sourceTree = "<group>"; };
+		4869F9672A95EA1800BA3517 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				4869F9622A95D4B400BA3517 /* TheaterViewController.swift */,
+				4869F9672A95EA1800BA3517 /* About.swift */,
 			);
 			path = Theater;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4869F9682A95EA1800BA3517 /* About.swift in Sources */,
 				4869F9522A95CAE100BA3517 /* ViewController.swift in Sources */,
 				4869F94E2A95CAE100BA3517 /* AppDelegate.swift in Sources */,
 				4869F9632A95D4B400BA3517 /* TheaterViewController.swift in Sources */,
