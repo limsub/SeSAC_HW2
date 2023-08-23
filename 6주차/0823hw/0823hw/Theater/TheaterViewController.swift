@@ -14,6 +14,21 @@ import SnapKit
 
 // 8/23 hw
 
+// 에러 : 지도에서 화면이 움직이는 동안 앱을 백그라운드로 보내면 에러나면서 종료됨
+        // 설정 화면으로 보낼 때는 걍 에러남
+        // 현재 위치로 화면이 이동하는 것도 애니메이션이 없어짐
+
+
+// 1. 사용자의 위치 권한 허용 여부
+    // 허용 -> 사용자의 위치로 포커스
+    // 거부 -> 청년취업사관학교 영등포캠퍼스 - 구분해주기 위해 일단 롯데월드
+        // 롯데월드 37.511081, 127.098167
+        // 청취사 37.517829, 126.886270
+
+// 2. location 버튼
+    // 허용 -> 사용자의 위치로 포커스
+    // 거부 -> alert으로 설정 창 유도
+
 
 class TheaterViewController: UIViewController {
     
@@ -63,7 +78,12 @@ class TheaterViewController: UIViewController {
         
         // 시작
         checkDeviceLocationAuthorization()
+        
+        // 버튼 연결
+        locationButton.addTarget(self, action: #selector(locationButtonClicked), for: .touchUpInside)
     }
+    
+    
     
     
     func setLayout() {
@@ -83,6 +103,46 @@ class TheaterViewController: UIViewController {
             make.height.equalTo(40)
         }
     }
+}
+
+
+// 버튼 클릭 함수
+extension TheaterViewController {
+    
+    @objc
+    func locationButtonClicked() {
+        
+        DispatchQueue.global().async {
+            if (CLLocationManager.locationServicesEnabled()) {
+                let authorization: CLAuthorizationStatus
+                
+                if #available(iOS 14.0, *) {
+                    authorization = self.locationManager.authorizationStatus
+                } else {
+                    authorization = CLLocationManager.authorizationStatus()
+                }
+                
+                DispatchQueue.main.async {
+                    switch authorization {
+                    case .denied:
+                        self.showLocationSettingAlert()
+                    default:
+                        self.locationManager.startUpdatingLocation()
+                        
+                        
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    @objc
+    func filterButtonClicked() {
+        
+    }
+    
+    
 }
 
 
@@ -132,7 +192,8 @@ extension TheaterViewController {
             print("restriced")
         case .denied:
             print("권한 상태 : denied")
-            showLocationSettingAlert()
+            setRegionAndAnnotation(center: CLLocationCoordinate2D(latitude: 37.511081, longitude: 127.098167))
+//            showLocationSettingAlert()
         case .authorizedAlways:
             print("authorizedAlways")
         case .authorizedWhenInUse:
@@ -156,11 +217,11 @@ extension TheaterViewController {
         )
         mapView.setRegion(region, animated: true)
     
-        let annotation = MKPointAnnotation()
-        annotation.title = "현재 위치입니다"
-        annotation.coordinate = center
-        
-        mapView.addAnnotation(annotation)
+//        let annotation = MKPointAnnotation()
+//        annotation.title = "현재 위치입니다"
+//        annotation.coordinate = center
+//        
+//        mapView.addAnnotation(annotation)
     }
     
     
