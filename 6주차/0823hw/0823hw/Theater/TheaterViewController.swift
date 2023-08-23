@@ -285,6 +285,7 @@ extension TheaterViewController {
             longitudinalMeters: 100
         )
         mapView.setRegion(region, animated: true)
+        mapView.showsUserLocation = true
     
 //        let annotation = MKPointAnnotation()
 //        annotation.title = "현재 위치입니다"
