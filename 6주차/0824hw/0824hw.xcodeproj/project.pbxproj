@@ -19,6 +19,8 @@
 		484900D12A974EC1007987D8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 484900D02A974EC1007987D8 /* SnapKit */; };
 		484900D42A9766AD007987D8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484900D32A9766AD007987D8 /* MainViewController.swift */; };
 		484900D62A976A58007987D8 /* Extension+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484900D52A976A58007987D8 /* Extension+UIButton.swift */; };
+		484900D82A977D98007987D8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484900D72A977D98007987D8 /* LoginViewController.swift */; };
+		484900DA2A977FD7007987D8 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484900D92A977FD7007987D8 /* LoginTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		484900CD2A974DED007987D8 /* Test3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test3ViewController.swift; sourceTree = "<group>"; };
 		484900D32A9766AD007987D8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		484900D52A976A58007987D8 /* Extension+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIButton.swift"; sourceTree = "<group>"; };
+		484900D72A977D98007987D8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		484900D92A977FD7007987D8 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			children = (
 				484900D32A9766AD007987D8 /* MainViewController.swift */,
 				484900D52A976A58007987D8 /* Extension+UIButton.swift */,
+				484900D72A977D98007987D8 /* LoginViewController.swift */,
+				484900D92A977FD7007987D8 /* LoginTextField.swift */,
 			);
 			path = JackFlix;
 			sourceTree = "<group>";
@@ -177,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				484900D82A977D98007987D8 /* LoginViewController.swift in Sources */,
 				484900D42A9766AD007987D8 /* MainViewController.swift in Sources */,
 				484900CC2A974DE7007987D8 /* Test2ViewController.swift in Sources */,
 				484900CA2A974DDE007987D8 /* Test1ViewController.swift in Sources */,
@@ -185,6 +192,7 @@
 				484900D62A976A58007987D8 /* Extension+UIButton.swift in Sources */,
 				484900CE2A974DED007987D8 /* Test3ViewController.swift in Sources */,
 				484900B72A974DA1007987D8 /* SceneDelegate.swift in Sources */,
+				484900DA2A977FD7007987D8 /* LoginTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
