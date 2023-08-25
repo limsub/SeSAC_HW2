@@ -37,6 +37,8 @@ class SkipPagePracticeViewController: UIViewController {
 //    let v6 = ViewController6()
     
     let viewList = {
+        // 이게 왜 담기지..?
+        // 자동으로 타입 잡히
         let list = [ViewController1(), ViewController2(), ViewController3(), ViewController4(), ViewController5(), ViewController6()]
 
         return list
@@ -51,6 +53,8 @@ class SkipPagePracticeViewController: UIViewController {
 //            vc.delegate = self
 //        }
         
+        
+        // 이러면 인스턴스는 그대로고, 타입만 바뀐다고 보면 되나?
         (viewList[0] as! ViewController1).delegate = self
         (viewList[1] as! ViewController2).delegate = self
         (viewList[2] as! ViewController3).delegate = self
@@ -74,23 +78,21 @@ class SkipPagePracticeViewController: UIViewController {
             make.edges.equalTo(view)
         }
         
-        view.addSubview(skipButton)
-        skipButton.snp.makeConstraints { make in
-            make.centerX.equalTo(view)
-            make.width.equalTo(200)
-            make.bottom.equalTo(view).inset(80)
-        }
-        
-        skipButton.addTarget(self, action: #selector(skipButtonClicked), for: .touchUpInside)
+//        view.addSubview(skipButton)
+//        skipButton.snp.makeConstraints { make in
+//            make.centerX.equalTo(view)
+//            make.width.equalTo(200)
+//            make.bottom.equalTo(view).inset(80)
+//        }
+//        
+//        skipButton.addTarget(self, action: #selector(skipButtonClicked), for: .touchUpInside)
     }
     
     
     @objc
     func skipButtonClicked() {
-        
         guard let last = viewList.last else { return }
         pageViewController.setViewControllers([last], direction: .forward, animated: true)
-        
     }
     
 
@@ -119,6 +121,4 @@ extension SkipPagePracticeViewController: SkipToEndDelegate {
         guard let last = viewList.last else { return }
         pageViewController.setViewControllers([last], direction: .forward, animated: true)
     }
-    
-    
 }

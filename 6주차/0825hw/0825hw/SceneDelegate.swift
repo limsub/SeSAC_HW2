@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: scene)
 //        let isLogin = UserDefaults.standard.bool(forKey: "isLogin")
 //        let vc = (isLogin) ? MainViewController() : OnboardingViewController()
-        let vc = SkipPagePracticeViewController()
+        let vc = CircleImageViewController()
         let nav = UINavigationController(rootViewController: vc)
         window?.rootViewController = nav
         window?.makeKeyAndVisible()

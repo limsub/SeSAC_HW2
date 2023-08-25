@@ -19,6 +19,8 @@
 		488737262A98844C00B0C503 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488737252A98844C00B0C503 /* MainViewController.swift */; };
 		488737292A98907100B0C503 /* SkipPagePracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488737282A98907100B0C503 /* SkipPagePracticeViewController.swift */; };
 		4887372B2A98969800B0C503 /* SkipDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4887372A2A98969800B0C503 /* SkipDelegate.swift */; };
+		4887372E2A98D21700B0C503 /* CircleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4887372D2A98D21700B0C503 /* CircleImageViewController.swift */; };
+		488737302A98D22600B0C503 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4887372F2A98D22600B0C503 /* CustomImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		488737252A98844C00B0C503 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		488737282A98907100B0C503 /* SkipPagePracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkipPagePracticeViewController.swift; sourceTree = "<group>"; };
 		4887372A2A98969800B0C503 /* SkipDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkipDelegate.swift; sourceTree = "<group>"; };
+		4887372D2A98D21700B0C503 /* CircleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageViewController.swift; sourceTree = "<group>"; };
+		4887372F2A98D22600B0C503 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 		488737072A9878C800B0C503 /* 0825hw */ = {
 			isa = PBXGroup;
 			children = (
+				4887372C2A98D20C00B0C503 /* ImageViewTest */,
 				488737272A98905800B0C503 /* PabeViewPractice */,
 				488737242A98843600B0C503 /* Main */,
 				4887371C2A98790F00B0C503 /* PageViewTest */,
@@ -106,6 +111,15 @@
 				4887372A2A98969800B0C503 /* SkipDelegate.swift */,
 			);
 			path = PabeViewPractice;
+			sourceTree = "<group>";
+		};
+		4887372C2A98D20C00B0C503 /* ImageViewTest */ = {
+			isa = PBXGroup;
+			children = (
+				4887372D2A98D21700B0C503 /* CircleImageViewController.swift */,
+				4887372F2A98D22600B0C503 /* CustomImageView.swift */,
+			);
+			path = ImageViewTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,8 +205,10 @@
 				488737262A98844C00B0C503 /* MainViewController.swift in Sources */,
 				4887371E2A987CD600B0C503 /* OnboardingViewController.swift in Sources */,
 				488737202A987D0700B0C503 /* ExtraViewControllers.swift in Sources */,
+				4887372E2A98D21700B0C503 /* CircleImageViewController.swift in Sources */,
 				488737292A98907100B0C503 /* SkipPagePracticeViewController.swift in Sources */,
 				4887372B2A98969800B0C503 /* SkipDelegate.swift in Sources */,
+				488737302A98D22600B0C503 /* CustomImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

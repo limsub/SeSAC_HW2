@@ -9,6 +9,8 @@ import UIKit
 
 class OnboardingViewController: UIPageViewController {
     
+    
+    
     override init(transitionStyle style: UIPageViewController.TransitionStyle, navigationOrientation: UIPageViewController.NavigationOrientation, options: [UIPageViewController.OptionsKey : Any]? = nil) {
         
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal)
@@ -17,6 +19,7 @@ class OnboardingViewController: UIPageViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     
     var list: [UIViewController] = [];
     
