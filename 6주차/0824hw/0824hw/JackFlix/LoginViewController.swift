@@ -55,9 +55,8 @@ class LoginViewController: UIViewController {
         mainLabel.snp.makeConstraints { make in
             make.centerX.equalTo(view)
             make.top.equalTo(view).offset(100)
-            
-         
         }
+        
         
         
         emailTextField.snp.makeConstraints { make in
@@ -82,6 +81,7 @@ class LoginViewController: UIViewController {
             
             make.horizontalEdges.equalTo(view).inset(20)
             make.height.equalTo(40)
+        
         }
         
         locationTextField.snp.makeConstraints { make in
