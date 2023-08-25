@@ -19,8 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        let isLogin = UserDefaults.standard.bool(forKey: "isLogin")
-        let vc = (isLogin) ? MainViewController() : OnboardingViewController()
+//        let isLogin = UserDefaults.standard.bool(forKey: "isLogin")
+//        let vc = (isLogin) ? MainViewController() : OnboardingViewController()
+        let vc = SkipPagePracticeViewController()
         let nav = UINavigationController(rootViewController: vc)
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
