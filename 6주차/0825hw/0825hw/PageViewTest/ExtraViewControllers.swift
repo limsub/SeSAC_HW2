@@ -263,8 +263,20 @@ class ViewController6: UIViewController {
         return l
     }()
     
+    let button = {
+        let button = UIButton()
+        button.setTitle("로그인", for: .normal)
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 20)
+        
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        button.addTarget(self, action: #selector(loginSuccess), for: .touchUpInside)
+//        ViewController6.self 이걸 쓰면 안되지...
         
         view.backgroundColor = .yellow
         view.addSubview(label)
@@ -272,8 +284,33 @@ class ViewController6: UIViewController {
             make.center.equalTo(view)
         }
         
+        view.addSubview(button)
+        button.snp.makeConstraints { make in
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(40)
+            make.centerX.equalTo(view)
+        }
+        
         print("6 viewDidLoad")
     }
+    
+    @objc
+    func loginSuccess() {
+        
+        UserDefaults.standard.set(true, forKey: "isLogin")
+        
+        let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        let sceneDelegate = windowScene?.delegate as? SceneDelegate
+        
+        let vc = MainViewController()
+        
+        sceneDelegate?.window?.rootViewController = vc
+        sceneDelegate?.window?.makeKeyAndVisible()
+        
+//        vc.modalPresentationStyle = .fullScreen
+//        present(vc, animated: true)
+    }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

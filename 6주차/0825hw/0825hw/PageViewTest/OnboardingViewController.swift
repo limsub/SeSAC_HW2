@@ -30,7 +30,7 @@ class OnboardingViewController: UIPageViewController {
         connectProtocol()
         
         guard let first = list.first else { return }
-        setViewControllers([list[2]], direction: .forward, animated: true)
+        setViewControllers([first], direction: .forward, animated: true)
         
     }
     

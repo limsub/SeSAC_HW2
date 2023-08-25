@@ -16,6 +16,7 @@
 		4887371E2A987CD600B0C503 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4887371D2A987CD500B0C503 /* OnboardingViewController.swift */; };
 		488737202A987D0700B0C503 /* ExtraViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4887371F2A987D0700B0C503 /* ExtraViewControllers.swift */; };
 		488737232A987DC300B0C503 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 488737222A987DC300B0C503 /* SnapKit */; };
+		488737262A98844C00B0C503 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488737252A98844C00B0C503 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		488737162A9878CA00B0C503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4887371D2A987CD500B0C503 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		4887371F2A987D0700B0C503 /* ExtraViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraViewControllers.swift; sourceTree = "<group>"; };
+		488737252A98844C00B0C503 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		488737072A9878C800B0C503 /* 0825hw */ = {
 			isa = PBXGroup;
 			children = (
+				488737242A98843600B0C503 /* Main */,
 				4887371C2A98790F00B0C503 /* PageViewTest */,
 				488737082A9878C800B0C503 /* AppDelegate.swift */,
 				4887370A2A9878C800B0C503 /* SceneDelegate.swift */,
@@ -81,6 +84,14 @@
 				4887371F2A987D0700B0C503 /* ExtraViewControllers.swift */,
 			);
 			path = PageViewTest;
+			sourceTree = "<group>";
+		};
+		488737242A98843600B0C503 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				488737252A98844C00B0C503 /* MainViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +174,7 @@
 				4887370D2A9878C800B0C503 /* ViewController.swift in Sources */,
 				488737092A9878C800B0C503 /* AppDelegate.swift in Sources */,
 				4887370B2A9878C800B0C503 /* SceneDelegate.swift in Sources */,
+				488737262A98844C00B0C503 /* MainViewController.swift in Sources */,
 				4887371E2A987CD600B0C503 /* OnboardingViewController.swift in Sources */,
 				488737202A987D0700B0C503 /* ExtraViewControllers.swift in Sources */,
 			);
