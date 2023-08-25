@@ -8,11 +8,25 @@
 import UIKit
 import SnapKit
 
+
+// 맨 마지막 page로 바로 넘어가는 skipButton 구현
+// 페이지가 넘어갈 때 같이 넘어가진 않아서 별로 예쁘진 않다
+
 class SkipPagePracticeViewController: UIViewController {
     
     let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
     
-    var currentPage = 0
+    
+    let skipButton = {
+        let button = UIButton()
+        
+        button.setTitle("skip", for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 20)
+        button.backgroundColor = .white
+        button.setTitleColor(UIColor.black, for: .normal)
+        
+        return button
+    }()
     
     let viewList = {
        let list = [ViewController1(), ViewController2(), ViewController3(), ViewController4(), ViewController5(), ViewController6()]
@@ -23,6 +37,8 @@ class SkipPagePracticeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .white
+        
         pageViewController.dataSource = self
         pageViewController.delegate = self
         
@@ -32,10 +48,26 @@ class SkipPagePracticeViewController: UIViewController {
         
         view.addSubview(pageViewController.view)
         pageViewController.view.snp.makeConstraints { make in
-            make.center.equalTo(view)
-            make.size.equalTo(view).multipliedBy(0.8)
+            make.edges.equalTo(view)
         }
-
+        
+        view.addSubview(skipButton)
+        skipButton.snp.makeConstraints { make in
+            make.centerX.equalTo(view)
+            make.width.equalTo(200)
+            make.bottom.equalTo(view).inset(80)
+        }
+        
+        skipButton.addTarget(self, action: #selector(skipButtonClicked), for: .touchUpInside)
+    }
+    
+    
+    @objc
+    func skipButtonClicked() {
+        
+        guard let last = viewList.last else { return }
+        pageViewController.setViewControllers([last], direction: .forward, animated: true)
+        
     }
     
 
