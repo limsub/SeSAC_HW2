@@ -8,8 +8,22 @@
 import UIKit
 import SnapKit
 
+
 /* ======================== 1 ======================== */
 class ViewController1: UIViewController {
+    
+    weak var delegate: SkipToEndDelegate?
+    
+    let skipButton = {
+        let button = UIButton()
+        
+        button.setTitle("skip", for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 20)
+        button.backgroundColor = .white
+        button.setTitleColor(UIColor.black, for: .normal)
+        
+        return button
+    }()
     
     let label = {
         let l = UILabel()
@@ -29,7 +43,21 @@ class ViewController1: UIViewController {
             make.center.equalTo(view)
         }
         
+        view.addSubview(skipButton)
+        skipButton.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).inset(200)
+            make.trailing.equalTo(view).inset(50)
+        }
+        skipButton.addTarget(self, action: #selector(skipButtonClicked), for: .touchUpInside)
+        
+        
         print("1 viewDidLoad")
+    }
+    
+    @objc
+    func skipButtonClicked() {
+        print("hi")
+        delegate?.skipToEnd()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,6 +87,19 @@ class ViewController1: UIViewController {
 
 class ViewController2: UIViewController {
     
+    weak var delegate: SkipToEndDelegate?
+    
+    let skipButton = {
+        let button = UIButton()
+        
+        button.setTitle("skip", for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 20)
+        button.backgroundColor = .white
+        button.setTitleColor(UIColor.black, for: .normal)
+        
+        return button
+    }()
+    
     let label = {
         let l = UILabel()
         l.text = "2번"
@@ -77,7 +118,20 @@ class ViewController2: UIViewController {
             make.center.equalTo(view)
         }
         
+        view.addSubview(skipButton)
+        skipButton.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).inset(200)
+            make.trailing.equalTo(view).inset(50)
+        }
+        skipButton.addTarget(self, action: #selector(skipButtonClicked), for: .touchUpInside)
+        
         print("2 viewDidLoad")
+    }
+    
+    @objc
+    func skipButtonClicked() {
+        print("hi")
+        delegate?.skipToEnd()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -108,6 +162,19 @@ class ViewController2: UIViewController {
 
 class ViewController3: UIViewController {
     
+    weak var delegate: SkipToEndDelegate?
+    
+    let skipButton = {
+        let button = UIButton()
+        
+        button.setTitle("skip", for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 20)
+        button.backgroundColor = .white
+        button.setTitleColor(UIColor.black, for: .normal)
+        
+        return button
+    }()
+    
     let label = {
         let l = UILabel()
         l.text = "3번"
@@ -126,7 +193,20 @@ class ViewController3: UIViewController {
             make.center.equalTo(view)
         }
         
+        view.addSubview(skipButton)
+        skipButton.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).inset(200)
+            make.trailing.equalTo(view).inset(50)
+        }
+        skipButton.addTarget(self, action: #selector(skipButtonClicked), for: .touchUpInside)
+        
         print("3 viewDidLoad")
+    }
+    
+    @objc
+    func skipButtonClicked() {
+        print("hi")
+        delegate?.skipToEnd()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -156,6 +236,19 @@ class ViewController3: UIViewController {
 
 class ViewController4: UIViewController {
     
+    weak var delegate: SkipToEndDelegate?
+    
+    let skipButton = {
+        let button = UIButton()
+        
+        button.setTitle("skip", for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 20)
+        button.backgroundColor = .white
+        button.setTitleColor(UIColor.black, for: .normal)
+        
+        return button
+    }()
+    
     let label = {
         let l = UILabel()
         l.text = "4번"
@@ -174,7 +267,20 @@ class ViewController4: UIViewController {
             make.center.equalTo(view)
         }
         
+        view.addSubview(skipButton)
+        skipButton.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).inset(200)
+            make.trailing.equalTo(view).inset(50)
+        }
+        skipButton.addTarget(self, action: #selector(skipButtonClicked), for: .touchUpInside)
+        
         print("4 viewDidLoad")
+    }
+    
+    @objc
+    func skipButtonClicked() {
+        print("hi")
+        delegate?.skipToEnd()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -205,6 +311,19 @@ class ViewController4: UIViewController {
 
 class ViewController5: UIViewController {
     
+    weak var delegate: SkipToEndDelegate?
+    
+    let skipButton = {
+        let button = UIButton()
+        
+        button.setTitle("skip", for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 20)
+        button.backgroundColor = .white
+        button.setTitleColor(UIColor.black, for: .normal)
+        
+        return button
+    }()
+    
     let label = {
         let l = UILabel()
         l.text = "5번"
@@ -223,7 +342,20 @@ class ViewController5: UIViewController {
             make.center.equalTo(view)
         }
         
+        view.addSubview(skipButton)
+        skipButton.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).inset(200)
+            make.trailing.equalTo(view).inset(50)
+        }
+        skipButton.addTarget(self, action: #selector(skipButtonClicked), for: .touchUpInside)
+        
         print("5 viewDidLoad")
+    }
+    
+    @objc
+    func skipButtonClicked() {
+        print("hi")
+        delegate?.skipToEnd()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -253,6 +385,7 @@ class ViewController5: UIViewController {
 
 
 class ViewController6: UIViewController {
+    
     
     let label = {
         let l = UILabel()

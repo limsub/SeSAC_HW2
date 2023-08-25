@@ -28,14 +28,37 @@ class SkipPagePracticeViewController: UIViewController {
         return button
     }()
     
+//    let viewList: [ViewController] = []
+//    let v1 = ViewController1()
+//    let v2 = ViewController2()
+//    let v3 = ViewController3()
+//    let v4 = ViewController4()
+//    let v5 = ViewController5()
+//    let v6 = ViewController6()
+    
     let viewList = {
-       let list = [ViewController1(), ViewController2(), ViewController3(), ViewController4(), ViewController5(), ViewController6()]
-        
+        let list = [ViewController1(), ViewController2(), ViewController3(), ViewController4(), ViewController5(), ViewController6()]
+
         return list
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        viewList.forEach { vc in
+//            (vc as! ViewController1).delegate = self
+//
+//            vc.delegate = self
+//        }
+        
+        (viewList[0] as! ViewController1).delegate = self
+        (viewList[1] as! ViewController2).delegate = self
+        (viewList[2] as! ViewController3).delegate = self
+        (viewList[3] as! ViewController4).delegate = self
+        (viewList[4] as! ViewController5).delegate = self
+        
+        
+        
         
         view.backgroundColor = .white
         
@@ -85,6 +108,16 @@ extension SkipPagePracticeViewController: UIPageViewControllerDelegate, UIPageVi
         guard let currentIndex = viewList.firstIndex(of: viewController) else { return nil }
         
         return currentIndex >= viewList.count - 1 ? nil : viewList[currentIndex + 1]
+    }
+    
+    
+}
+
+
+extension SkipPagePracticeViewController: SkipToEndDelegate {
+    func skipToEnd() {
+        guard let last = viewList.last else { return }
+        pageViewController.setViewControllers([last], direction: .forward, animated: true)
     }
     
     

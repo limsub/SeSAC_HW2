@@ -18,6 +18,7 @@
 		488737232A987DC300B0C503 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 488737222A987DC300B0C503 /* SnapKit */; };
 		488737262A98844C00B0C503 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488737252A98844C00B0C503 /* MainViewController.swift */; };
 		488737292A98907100B0C503 /* SkipPagePracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488737282A98907100B0C503 /* SkipPagePracticeViewController.swift */; };
+		4887372B2A98969800B0C503 /* SkipDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4887372A2A98969800B0C503 /* SkipDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		4887371F2A987D0700B0C503 /* ExtraViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraViewControllers.swift; sourceTree = "<group>"; };
 		488737252A98844C00B0C503 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		488737282A98907100B0C503 /* SkipPagePracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkipPagePracticeViewController.swift; sourceTree = "<group>"; };
+		4887372A2A98969800B0C503 /* SkipDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkipDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				488737282A98907100B0C503 /* SkipPagePracticeViewController.swift */,
+				4887372A2A98969800B0C503 /* SkipDelegate.swift */,
 			);
 			path = PabeViewPractice;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				4887371E2A987CD600B0C503 /* OnboardingViewController.swift in Sources */,
 				488737202A987D0700B0C503 /* ExtraViewControllers.swift in Sources */,
 				488737292A98907100B0C503 /* SkipPagePracticeViewController.swift in Sources */,
+				4887372B2A98969800B0C503 /* SkipDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
