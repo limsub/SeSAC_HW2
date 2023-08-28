@@ -17,6 +17,10 @@
 		4887378A2A9C7BD400B0C503 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 488737892A9C7BD400B0C503 /* Alamofire */; };
 		4887378D2A9C7BE000B0C503 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4887378C2A9C7BE000B0C503 /* Kingfisher */; };
 		488737922A9C7C3300B0C503 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 488737912A9C7C3300B0C503 /* .gitignore */; };
+		488737942A9C7C9A00B0C503 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488737932A9C7C9A00B0C503 /* APIKey.swift */; };
+		488737962A9C7CCB00B0C503 /* Extension+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488737952A9C7CCB00B0C503 /* Extension+URL.swift */; };
+		488737992A9C7E9400B0C503 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488737982A9C7E9400B0C503 /* Struct.swift */; };
+		4887379C2A9C804C00B0C503 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4887379B2A9C804C00B0C503 /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,10 @@
 		4887377D2A9C7BB300B0C503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4887377F2A9C7BB300B0C503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		488737912A9C7C3300B0C503 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		488737932A9C7C9A00B0C503 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		488737952A9C7CCB00B0C503 /* Extension+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+URL.swift"; sourceTree = "<group>"; };
+		488737982A9C7E9400B0C503 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
+		4887379B2A9C804C00B0C503 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,7 @@
 		488737702A9C7BB200B0C503 /* 0828hw */ = {
 			isa = PBXGroup;
 			children = (
+				488737972A9C7E8A00B0C503 /* TMDB */,
 				4887378E2A9C7BE400B0C503 /* Network */,
 				488737712A9C7BB200B0C503 /* AppDelegate.swift */,
 				488737732A9C7BB200B0C503 /* SceneDelegate.swift */,
@@ -80,8 +89,19 @@
 		4887378E2A9C7BE400B0C503 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				488737932A9C7C9A00B0C503 /* APIKey.swift */,
+				488737952A9C7CCB00B0C503 /* Extension+URL.swift */,
+				4887379B2A9C804C00B0C503 /* APIManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		488737972A9C7E8A00B0C503 /* TMDB */ = {
+			isa = PBXGroup;
+			children = (
+				488737982A9C7E9400B0C503 /* Struct.swift */,
+			);
+			path = TMDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +186,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				488737992A9C7E9400B0C503 /* Struct.swift in Sources */,
 				488737762A9C7BB200B0C503 /* ViewController.swift in Sources */,
 				488737722A9C7BB200B0C503 /* AppDelegate.swift in Sources */,
+				488737942A9C7C9A00B0C503 /* APIKey.swift in Sources */,
+				488737962A9C7CCB00B0C503 /* Extension+URL.swift in Sources */,
 				488737742A9C7BB200B0C503 /* SceneDelegate.swift in Sources */,
+				4887379C2A9C804C00B0C503 /* APIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
