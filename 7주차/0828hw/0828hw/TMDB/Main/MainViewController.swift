@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MainViewController: BaseViewController {
     
     let mainView = MainView()
+    
+    var trendingMovies: [Result] = []
+    var movieGenres: GenreList?
     
     override func loadView() {
         self.view = mainView
@@ -18,7 +22,10 @@ class MainViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mainView.movieTableView.rowHeight = 200
+        mainView.movieTableView.rowHeight = 400
+        callTrendingMovies {
+            print("done")
+        }
     }
     
     override func setConfigure() {
@@ -31,18 +38,39 @@ class MainViewController: BaseViewController {
     override func setConstraints() {
         super.setConstraints()
     }
+    
+    
+    
+    func callTrendingMovies(_ completionHandler: @escaping () -> Void) {
+        APIManager.shared.callMovies { item in
+            self.trendingMovies = item.results;
+            
+            self.mainView.movieTableView.reloadData()
+        }
+    }
+    
+    
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return trendingMovies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell")
                 as? MainTableViewCell else { return UITableViewCell() }
         
-        cell.posterImageView.image = UIImage(systemName: "pencil")
+        let item = trendingMovies[indexPath.row]
+        
+        cell.titleLabel.text = item.title
+        cell.dateLabel.text = item.releaseDate
+        //cell.subtitleLabel.text = item.originalTitle
+        cell.voteLabel.text = String(item.voteAverage)
+        
+        let url = URL(string: Endpoint.imagePrefix.requestURL + item.backdropPath)
+        cell.posterImageView.kf.setImage(with: url)
+        
         
         return cell
     }
