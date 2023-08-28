@@ -77,7 +77,7 @@ class MainTableViewCell: BaseTableViewCell {
         }
         
         posterImageView.snp.makeConstraints { make in
-            make.top.equalTo(dateLabel.snp.bottom).inset(8)
+            make.top.equalTo(dateLabel.snp.bottom).offset(8)
             make.horizontalEdges.equalTo(contentView).inset(8)
             make.height.equalTo(contentView).multipliedBy(0.6)
         }

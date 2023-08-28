@@ -76,7 +76,16 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        present(DetailViewController(), animated: true)
+        
+        let item = trendingMovies[indexPath.row]
+        
+        let vc = DetailViewController();
+        vc.movieId = item.id
+        vc.backImageURL = item.backdropPath
+        vc.posterImageURL = item.posterPath
+        vc.titleName = item.title
+        vc.overView = item.overview
+        present(vc, animated: true)
     }
     
 }

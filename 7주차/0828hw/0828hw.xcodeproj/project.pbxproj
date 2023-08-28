@@ -116,9 +116,9 @@
 		488737972A9C7E8A00B0C503 /* TMDB */ = {
 			isa = PBXGroup;
 			children = (
+				488737982A9C7E9400B0C503 /* Struct.swift */,
 				488737A72A9C882A00B0C503 /* Detail */,
 				488737A62A9C882500B0C503 /* Main */,
-				488737982A9C7E9400B0C503 /* Struct.swift */,
 			);
 			path = TMDB;
 			sourceTree = "<group>";
