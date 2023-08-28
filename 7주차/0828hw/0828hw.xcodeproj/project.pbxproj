@@ -21,6 +21,14 @@
 		488737962A9C7CCB00B0C503 /* Extension+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488737952A9C7CCB00B0C503 /* Extension+URL.swift */; };
 		488737992A9C7E9400B0C503 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488737982A9C7E9400B0C503 /* Struct.swift */; };
 		4887379C2A9C804C00B0C503 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4887379B2A9C804C00B0C503 /* APIManager.swift */; };
+		488737A12A9C850A00B0C503 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488737A02A9C850A00B0C503 /* BaseViewController.swift */; };
+		488737A32A9C850F00B0C503 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488737A22A9C850F00B0C503 /* BaseView.swift */; };
+		488737A52A9C851800B0C503 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488737A42A9C851800B0C503 /* BaseTableViewCell.swift */; };
+		488737A92A9C884500B0C503 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488737A82A9C884500B0C503 /* MainTableViewCell.swift */; };
+		488737AB2A9C885100B0C503 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488737AA2A9C885100B0C503 /* MainView.swift */; };
+		488737AD2A9C885800B0C503 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488737AC2A9C885800B0C503 /* MainViewController.swift */; };
+		488737AF2A9C8B2E00B0C503 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488737AE2A9C8B2E00B0C503 /* DetailView.swift */; };
+		488737B12A9C8B3B00B0C503 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488737B02A9C8B3B00B0C503 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +45,14 @@
 		488737952A9C7CCB00B0C503 /* Extension+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+URL.swift"; sourceTree = "<group>"; };
 		488737982A9C7E9400B0C503 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
 		4887379B2A9C804C00B0C503 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		488737A02A9C850A00B0C503 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		488737A22A9C850F00B0C503 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		488737A42A9C851800B0C503 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		488737A82A9C884500B0C503 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		488737AA2A9C885100B0C503 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		488737AC2A9C885800B0C503 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		488737AE2A9C8B2E00B0C503 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		488737B02A9C8B3B00B0C503 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +88,7 @@
 		488737702A9C7BB200B0C503 /* 0828hw */ = {
 			isa = PBXGroup;
 			children = (
+				4887379F2A9C84FC00B0C503 /* Base */,
 				488737972A9C7E8A00B0C503 /* TMDB */,
 				4887378E2A9C7BE400B0C503 /* Network */,
 				488737712A9C7BB200B0C503 /* AppDelegate.swift */,
@@ -99,9 +116,40 @@
 		488737972A9C7E8A00B0C503 /* TMDB */ = {
 			isa = PBXGroup;
 			children = (
+				488737A72A9C882A00B0C503 /* Detail */,
+				488737A62A9C882500B0C503 /* Main */,
 				488737982A9C7E9400B0C503 /* Struct.swift */,
 			);
 			path = TMDB;
+			sourceTree = "<group>";
+		};
+		4887379F2A9C84FC00B0C503 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				488737A02A9C850A00B0C503 /* BaseViewController.swift */,
+				488737A22A9C850F00B0C503 /* BaseView.swift */,
+				488737A42A9C851800B0C503 /* BaseTableViewCell.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		488737A62A9C882500B0C503 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				488737A82A9C884500B0C503 /* MainTableViewCell.swift */,
+				488737AA2A9C885100B0C503 /* MainView.swift */,
+				488737AC2A9C885800B0C503 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		488737A72A9C882A00B0C503 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				488737AE2A9C8B2E00B0C503 /* DetailView.swift */,
+				488737B02A9C8B3B00B0C503 /* DetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,12 +234,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				488737A92A9C884500B0C503 /* MainTableViewCell.swift in Sources */,
+				488737AD2A9C885800B0C503 /* MainViewController.swift in Sources */,
+				488737AB2A9C885100B0C503 /* MainView.swift in Sources */,
+				488737AF2A9C8B2E00B0C503 /* DetailView.swift in Sources */,
 				488737992A9C7E9400B0C503 /* Struct.swift in Sources */,
 				488737762A9C7BB200B0C503 /* ViewController.swift in Sources */,
 				488737722A9C7BB200B0C503 /* AppDelegate.swift in Sources */,
 				488737942A9C7C9A00B0C503 /* APIKey.swift in Sources */,
 				488737962A9C7CCB00B0C503 /* Extension+URL.swift in Sources */,
+				488737A12A9C850A00B0C503 /* BaseViewController.swift in Sources */,
+				488737A32A9C850F00B0C503 /* BaseView.swift in Sources */,
 				488737742A9C7BB200B0C503 /* SceneDelegate.swift in Sources */,
+				488737B12A9C8B3B00B0C503 /* DetailViewController.swift in Sources */,
+				488737A52A9C851800B0C503 /* BaseTableViewCell.swift in Sources */,
 				4887379C2A9C804C00B0C503 /* APIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
