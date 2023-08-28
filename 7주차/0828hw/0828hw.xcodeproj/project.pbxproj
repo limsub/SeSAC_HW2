@@ -16,7 +16,7 @@
 		488737872A9C7BCC00B0C503 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 488737862A9C7BCC00B0C503 /* SnapKit */; };
 		4887378A2A9C7BD400B0C503 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 488737892A9C7BD400B0C503 /* Alamofire */; };
 		4887378D2A9C7BE000B0C503 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4887378C2A9C7BE000B0C503 /* Kingfisher */; };
-		488737902A9C7BF200B0C503 /* .gitignore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4887378F2A9C7BF200B0C503 /* .gitignore.swift */; };
+		488737922A9C7C3300B0C503 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 488737912A9C7C3300B0C503 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		4887377A2A9C7BB300B0C503 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4887377D2A9C7BB300B0C503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4887377F2A9C7BB300B0C503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4887378F2A9C7BF200B0C503 /* .gitignore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = .gitignore.swift; sourceTree = "<group>"; };
+		488737912A9C7C3300B0C503 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 				4887377A2A9C7BB300B0C503 /* Assets.xcassets */,
 				4887377C2A9C7BB300B0C503 /* LaunchScreen.storyboard */,
 				4887377F2A9C7BB300B0C503 /* Info.plist */,
-				4887378F2A9C7BF200B0C503 /* .gitignore.swift */,
+				488737912A9C7C3300B0C503 /* .gitignore */,
 			);
 			path = 0828hw;
 			sourceTree = "<group>";
@@ -152,6 +152,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				488737922A9C7C3300B0C503 /* .gitignore in Resources */,
 				4887377E2A9C7BB300B0C503 /* LaunchScreen.storyboard in Resources */,
 				4887377B2A9C7BB300B0C503 /* Assets.xcassets in Resources */,
 				488737792A9C7BB200B0C503 /* Main.storyboard in Resources */,
@@ -166,7 +167,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				488737762A9C7BB200B0C503 /* ViewController.swift in Sources */,
-				488737902A9C7BF200B0C503 /* .gitignore.swift in Sources */,
 				488737722A9C7BB200B0C503 /* AppDelegate.swift in Sources */,
 				488737742A9C7BB200B0C503 /* SceneDelegate.swift in Sources */,
 			);
