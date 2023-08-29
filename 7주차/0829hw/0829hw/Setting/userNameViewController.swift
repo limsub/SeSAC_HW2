@@ -34,7 +34,9 @@ class UserNameViewController: BaseViewController {
         super.viewDidDisappear(animated)
         
         if let txt = mainView.textField.text {
-            completionHandler?(txt)
+            if (!txt.isEmpty) {
+                completionHandler?(txt)
+            }
         }
     }
     

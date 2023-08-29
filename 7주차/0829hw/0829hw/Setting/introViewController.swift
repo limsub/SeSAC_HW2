@@ -30,7 +30,9 @@ class IntroViewController: BaseViewController {
     func completeButtonClicked() {
         
         if let txt = mainView.textView.text {
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "introduction"), object: nil, userInfo: ["new intro": txt])
+            if (!txt.isEmpty) {
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "introduction"), object: nil, userInfo: ["new intro": txt])
+            }
         }
         navigationController?.popViewController(animated: true)
     }

@@ -35,7 +35,9 @@ class NameViewController: BaseViewController {
         super.viewDidDisappear(animated)
         
         if let txt = mainView.textField.text {
-            delegate?.receiveData(data: txt)
+            if (!txt.isEmpty) {
+                delegate?.receiveData(data: txt)
+            }
         }
             
     }

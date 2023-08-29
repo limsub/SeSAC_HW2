@@ -24,11 +24,43 @@ class ModifyProfileView: BaseView {
     static func makeButton(_ sender: String) -> UIButton {
         let button = UIButton()
         
+        /*실패*/
+        // 1. plain으로 만들어도 안됨 (gray, tint 이런건 누가봐도 배경 있어서 그런가 터치 됨)
+//        let button = UIButton(configuration: .plain())
+
+        // 2.
+//        button.backgroundColor = .clear
+        
+        
+        /* 약간 성공 */
+        // 1.
+        // 얘는 최소 0.01 넘겨야 터치 가능 (0.1 x, 0.11 o)
+        // 문제는 텍스트까지 다 안보여
+//        button.layer.opacity = 0.011
+        
+        // 2.
+        // 보이는거 굿. 0.001까지 터치 가능 (0.0005 x)
+//        button.layer.backgroundColor = UIColor.white.cgColor.copy(alpha: 0.001)
+        
+        
+        // 3.
+        // 얘는 0.001까지 됨 -> 일단 지금까진 얘가 제일 비슷하다
+//        button.backgroundColor = UIColor.white.withAlphaComponent(0.0005)
+        
+//        button.backgroundColor = .black
+        
+
+        
+        
+
+        
         button.setTitle(sender, for: .normal)
         button.setTitleColor(.lightGray, for: .normal)
         button.contentHorizontalAlignment = .leading
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.borderWidth = 1
+        
+//        button.backgroundColor = .blue
         
         return button
     }
@@ -73,6 +105,7 @@ class ModifyProfileView: BaseView {
             make.top.equalTo(nameTitle)
             make.leading.equalTo(nameTitle.snp.trailing)
             make.trailing.equalTo(self).inset(20)
+//            make.width.equalTo(200)
             make.height.equalTo(50)
         }
         userNameButton.snp.makeConstraints { make in
