@@ -20,5 +20,12 @@ class UserNameViewController: BaseViewController {
         
         title = "사용자 이름"
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "완료", style: .plain, target: self, action: #selector(completeButtonClicked))
+    }
+    
+    @objc
+    func completeButtonClicked() {
+        navigationController?.popViewController(animated: true)
     }
 }

@@ -24,6 +24,7 @@
 		4887382F2A9DD84D00B0C503 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4887382E2A9DD84D00B0C503 /* IntroView.swift */; };
 		488738312A9DD85200B0C503 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488738302A9DD85200B0C503 /* IntroViewController.swift */; };
 		488738332A9DD8B600B0C503 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488738322A9DD8B600B0C503 /* NameView.swift */; };
+		488738362A9DDD9C00B0C503 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488738352A9DDD9C00B0C503 /* CALayer+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		4887382E2A9DD84D00B0C503 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		488738302A9DD85200B0C503 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		488738322A9DD8B600B0C503 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
+		488738352A9DDD9C00B0C503 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		488738012A9DD20E00B0C503 /* 0829hw */ = {
 			isa = PBXGroup;
 			children = (
+				488738342A9DDD8F00B0C503 /* Extension */,
 				488738252A9DD82300B0C503 /* Setting */,
 				4887381E2A9DD36D00B0C503 /* ModifyProfile */,
 				488738162A9DD26700B0C503 /* Base */,
@@ -121,6 +124,14 @@
 				488738302A9DD85200B0C503 /* IntroViewController.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		488738342A9DDD8F00B0C503 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				488738352A9DDD9C00B0C503 /* CALayer+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +220,7 @@
 				4887382F2A9DD84D00B0C503 /* IntroView.swift in Sources */,
 				488738032A9DD20E00B0C503 /* AppDelegate.swift in Sources */,
 				488738052A9DD20E00B0C503 /* SceneDelegate.swift in Sources */,
+				488738362A9DDD9C00B0C503 /* CALayer+Extension.swift in Sources */,
 				488738242A9DD39C00B0C503 /* ModifyProfileViewController.swift in Sources */,
 				488738312A9DD85200B0C503 /* IntroViewController.swift in Sources */,
 				488738202A9DD38500B0C503 /* ModifyProfileView.swift in Sources */,

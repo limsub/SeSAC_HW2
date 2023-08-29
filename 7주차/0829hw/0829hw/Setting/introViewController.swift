@@ -20,5 +20,12 @@ class IntroViewController: BaseViewController {
         
         title = "소개"
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "완료", style: .plain, target: self, action: #selector(completeButtonClicked))
+    }
+    
+    @objc
+    func completeButtonClicked() {
+        navigationController?.popViewController(animated: true)
     }
 }
