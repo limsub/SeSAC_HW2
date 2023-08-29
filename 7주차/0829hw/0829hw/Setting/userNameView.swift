@@ -7,6 +7,8 @@
 
 import UIKit
 
+// 값 전달 : closure 이용
+
 class UserNameView: BaseView {
     
     let label = {

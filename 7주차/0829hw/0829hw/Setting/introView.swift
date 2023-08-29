@@ -7,6 +7,8 @@
 
 import UIKit
 
+// 값 전달 : NotificationCenter 이용
+
 class IntroView: BaseView {
     
     let label = {

@@ -7,6 +7,8 @@
 
 import UIKit
 
+// 값 전달 : NotificationCenter 이용
+
 class IntroViewController: BaseViewController {
     
     let mainView = IntroView()
@@ -26,6 +28,10 @@ class IntroViewController: BaseViewController {
     
     @objc
     func completeButtonClicked() {
+        
+        if let txt = mainView.textView.text {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "introduction"), object: nil, userInfo: ["new intro": txt])
+        }
         navigationController?.popViewController(animated: true)
     }
 }

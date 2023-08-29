@@ -8,6 +8,12 @@
 import UIKit
 
 
+// 1.
+protocol PassDataDelegate {
+    func receiveData(data: String)
+}
+
+
 class ModifyProfileViewController: BaseViewController {
     
     let mainView = ModifyProfileView()
@@ -21,6 +27,16 @@ class ModifyProfileViewController: BaseViewController {
         
         title = "프로필 편집"
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        // 1.
+        NotificationCenter.default.addObserver(self, selector: #selector(newIntroduction), name: NSNotification.Name("introduction"), object: nil)
+    }
+    
+    @objc
+    func newIntroduction(notification: NSNotification) {
+        if let intro = notification.userInfo?["new intro"] as? String {
+            mainView.introButton.setTitle(intro, for: .normal)
+        }
     }
     
     override func setConfigure() {
@@ -33,6 +49,8 @@ class ModifyProfileViewController: BaseViewController {
     func nameButtonClicked() {
         print("hi name")
         let vc = NameViewController()
+        // 5.
+        vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -40,6 +58,10 @@ class ModifyProfileViewController: BaseViewController {
     func userNameButtonClicked() {
         print("hi username")
         let vc = UserNameViewController()
+        // 3.
+        vc.completionHandler = { str in
+            self.mainView.userNameButton.setTitle(str, for: .normal)
+        }
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -50,4 +72,12 @@ class ModifyProfileViewController: BaseViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+}
+
+
+// 4.
+extension ModifyProfileViewController: PassDataDelegate {
+    func receiveData(data: String) {
+        mainView.nameButton.setTitle(data, for: .normal)
+    }
 }

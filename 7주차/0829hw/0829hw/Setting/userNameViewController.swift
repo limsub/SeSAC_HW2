@@ -7,9 +7,14 @@
 
 import UIKit
 
+// 값 전달 : closure 이용
+
 class UserNameViewController: BaseViewController {
     
     let mainView = UserNameView()
+    
+    // 1.
+    var completionHandler: ((String) -> Void)?
     
     override func loadView() {
         self.view = mainView
@@ -22,6 +27,15 @@ class UserNameViewController: BaseViewController {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "완료", style: .plain, target: self, action: #selector(completeButtonClicked))
+    }
+    
+    // 2.
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        if let txt = mainView.textField.text {
+            completionHandler?(txt)
+        }
     }
     
     @objc

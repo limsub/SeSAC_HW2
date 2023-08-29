@@ -7,6 +7,8 @@
 
 import UIKit
 
+// 값 전달 : Delegate Pattern 이용
+
 class NameView: BaseView {
     
     let label = {
