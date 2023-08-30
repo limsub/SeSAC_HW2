@@ -13,6 +13,17 @@
     - 값 전달 (Notification / Delegate Pattern / Closure)
     - UIButton tap issue (backgroundColor)
 
+#### 0830hw
+- Photogram Project
+    - UIAlertController 다른 파일에서 생성 (handler 관리)
+    - 갤러리에서 가져오기
+        - UIImagePickerController / .photoLibrary
+    - 웹에서 가져오기
+        - Unsplash API (Alamofire + Codable / Singleton Pattern) 
+        - UISearchBar (responder)
+        - KingFisher
+        - Notification Center 값 전달 (addObserver / post)
+
 
 ## 6주차
 #### 0822hw
