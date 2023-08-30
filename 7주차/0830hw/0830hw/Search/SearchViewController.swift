@@ -68,7 +68,16 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("go")
+        
+        if let txt = photoSet?[indexPath.row].urls.raw {
+            NotificationCenter.default.post(
+                name: NSNotification.Name(rawValue: "poster"),
+                object: nil,
+                userInfo: ["new image": txt]
+            )
+        }
+        
+        dismiss(animated: true)
     }
 }
 

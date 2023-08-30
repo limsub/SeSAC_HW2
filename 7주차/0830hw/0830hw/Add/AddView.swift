@@ -15,8 +15,8 @@ class AddView: BaseView {
     let posterImageView = {
         let imageView = UIImageView()
         
-        imageView.backgroundColor = .lightGray
-        imageView.contentMode = .scaleAspectFill
+//        imageView.backgroundColor = .lightGray
+        imageView.contentMode = .scaleAspectFit
         
         return imageView
     }()

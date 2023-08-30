@@ -23,6 +23,20 @@ class AddViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(newImage),
+            name: NSNotification.Name("poster"),
+            object: nil
+        )
+    }
+    
+    @objc
+    func newImage(notification: NSNotification) {
+        if let newImage = notification.userInfo?["new image"] as? String {
+            mainView.posterImageView.kf.setImage(with: URL(string: newImage))
+        }
     }
     
     override func setConfigure() {
