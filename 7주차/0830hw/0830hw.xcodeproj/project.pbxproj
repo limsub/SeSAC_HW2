@@ -24,6 +24,7 @@
 		4899CB742A9F51920022AEDC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899CB732A9F51920022AEDC /* SearchViewController.swift */; };
 		4899CB762A9F519B0022AEDC /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899CB752A9F519B0022AEDC /* SearchCollectionViewCell.swift */; };
 		4899CB792A9F55E10022AEDC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899CB782A9F55E10022AEDC /* Alert.swift */; };
+		4899CB7C2A9F7AFC0022AEDC /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4899CB7B2A9F7AFC0022AEDC /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		4899CB732A9F51920022AEDC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4899CB752A9F519B0022AEDC /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		4899CB782A9F55E10022AEDC /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		4899CB7B2A9F7AFC0022AEDC /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		4899CB492A9F4CB10022AEDC /* 0830hw */ = {
 			isa = PBXGroup;
 			children = (
+				4899CB7A2A9F7AEA0022AEDC /* Network */,
 				4899CB772A9F55D80022AEDC /* Other */,
 				4899CB6C2A9F4F020022AEDC /* Add */,
 				4899CB5F2A9F4CF10022AEDC /* Search */,
@@ -89,6 +92,7 @@
 				4899CB532A9F4CB20022AEDC /* Assets.xcassets */,
 				4899CB552A9F4CB20022AEDC /* LaunchScreen.storyboard */,
 				4899CB582A9F4CB20022AEDC /* Info.plist */,
+				4899CB7B2A9F7AFC0022AEDC /* .gitignore */,
 			);
 			path = 0830hw;
 			sourceTree = "<group>";
@@ -128,6 +132,13 @@
 				4899CB782A9F55E10022AEDC /* Alert.swift */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		4899CB7A2A9F7AEA0022AEDC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4899CB7C2A9F7AFC0022AEDC /* .gitignore in Resources */,
 				4899CB572A9F4CB20022AEDC /* LaunchScreen.storyboard in Resources */,
 				4899CB542A9F4CB20022AEDC /* Assets.xcassets in Resources */,
 				4899CB522A9F4CB10022AEDC /* Main.storyboard in Resources */,

@@ -46,7 +46,7 @@ class AddView: BaseView {
         }
         
         searchButton.snp.makeConstraints { make in
-            make.top.equalTo(posterImageView.snp.bottom).offset(30)
+            make.top.equalTo(posterImageView.snp.bottom).offset(50)
             make.horizontalEdges.equalTo(self).inset(20)
             make.height.equalTo(50)
         }
