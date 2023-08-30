@@ -40,6 +40,7 @@ class ModifyProfileViewController: BaseViewController {
     }
     
     override func setConfigure() {
+        super.setConfigure()
         mainView.nameButton.addTarget(self, action: #selector(nameButtonClicked), for: .touchUpInside)
         mainView.userNameButton.addTarget(self, action: #selector(userNameButtonClicked), for: .touchUpInside)
         mainView.introButton.addTarget(self, action: #selector(introButtonClicked), for: .touchUpInside)

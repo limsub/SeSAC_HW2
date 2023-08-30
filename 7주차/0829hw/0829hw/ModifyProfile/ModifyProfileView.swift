@@ -45,9 +45,10 @@ class ModifyProfileView: BaseView {
         
         // 3.
         // 얘는 0.001까지 됨 -> 일단 지금까진 얘가 제일 비슷하다
-//        button.backgroundColor = UIColor.white.withAlphaComponent(0.0005)
+//        button.backgroundColor = UIColor.white.withAlphaComponent(0.001)
         
-//        button.backgroundColor = .black
+//        button.backgroundColor = .blue
+//        button.backgroundColor = .clear
         
 
         
@@ -59,7 +60,6 @@ class ModifyProfileView: BaseView {
         button.contentHorizontalAlignment = .leading
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.borderWidth = 1
-        
 //        button.backgroundColor = .blue
         
         return button
@@ -75,6 +75,7 @@ class ModifyProfileView: BaseView {
     let introButton = makeButton("소개")
     
     override func setConfigure() {
+
         [nameTitle, userNameTitle, introTitle, nameButton, userNameButton, introButton].forEach { item in
             addSubview(item)
         }
@@ -82,8 +83,9 @@ class ModifyProfileView: BaseView {
     
     
     override func setConstraints() {
+        
         nameTitle.snp.makeConstraints { make in
-            make.top.equalTo(self.safeAreaLayoutGuide).offset(100)
+            make.top.equalTo(safeAreaLayoutGuide).offset(100)
             make.leading.equalTo(self).offset(20)
             make.width.equalTo(120)
             make.height.equalTo(50)
@@ -101,13 +103,21 @@ class ModifyProfileView: BaseView {
             make.height.equalTo(50)
         }
         
-        nameButton.snp.makeConstraints { make in
-            make.top.equalTo(nameTitle)
-            make.leading.equalTo(nameTitle.snp.trailing)
-            make.trailing.equalTo(self).inset(20)
-//            make.width.equalTo(200)
-            make.height.equalTo(50)
-        }
+//        nameButton.snp.makeConstraints { make in
+//            make.top.equalTo(nameTitle.snp.top)
+//            make.leading.equalTo(nameTitle.snp.trailing)
+//            make.trailing.equalTo(self).inset(20)
+////            make.width.equalTo(200)
+//            make.height.equalTo(50)
+//        }
+        
+        nameButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            nameButton.topAnchor.constraint(equalTo: nameTitle.topAnchor),
+            nameButton.leadingAnchor.constraint(equalTo: nameTitle.trailingAnchor),
+            nameButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            nameButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
         userNameButton.snp.makeConstraints { make in
             make.top.equalTo(userNameTitle)
             make.leading.equalTo(userNameTitle.snp.trailing)

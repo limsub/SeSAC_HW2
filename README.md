@@ -8,6 +8,12 @@
     - Alamofire (Codable)
     - View 분리 (Base V / Base VC / Base TVC)
 
+#### 0829hw
+- Modify Profile Screen
+    - 값 전달 (Notification / Delegate Pattern / Closure)
+    - UIButton tap issue (backgroundColor)
+
+
 ## 6주차
 #### 0822hw
 - CodeBase Layout (SnapKit 사용)

@@ -26,14 +26,20 @@ class IntroViewController: BaseViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "완료", style: .plain, target: self, action: #selector(completeButtonClicked))
     }
     
-    @objc
-    func completeButtonClicked() {
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         
+        // 2.
         if let txt = mainView.textView.text {
             if (!txt.isEmpty) {
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "introduction"), object: nil, userInfo: ["new intro": txt])
             }
         }
+    }
+    
+    @objc
+    func completeButtonClicked() {
+        
         navigationController?.popViewController(animated: true)
     }
 }
