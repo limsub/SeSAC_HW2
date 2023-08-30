@@ -23,6 +23,7 @@
 		4899CB722A9F518D0022AEDC /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899CB712A9F518D0022AEDC /* SearchView.swift */; };
 		4899CB742A9F51920022AEDC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899CB732A9F51920022AEDC /* SearchViewController.swift */; };
 		4899CB762A9F519B0022AEDC /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899CB752A9F519B0022AEDC /* SearchCollectionViewCell.swift */; };
+		4899CB792A9F55E10022AEDC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899CB782A9F55E10022AEDC /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		4899CB712A9F518D0022AEDC /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		4899CB732A9F51920022AEDC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4899CB752A9F519B0022AEDC /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		4899CB782A9F55E10022AEDC /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		4899CB492A9F4CB10022AEDC /* 0830hw */ = {
 			isa = PBXGroup;
 			children = (
+				4899CB772A9F55D80022AEDC /* Other */,
 				4899CB6C2A9F4F020022AEDC /* Add */,
 				4899CB5F2A9F4CF10022AEDC /* Search */,
 				4899CB5E2A9F4CEA0022AEDC /* Base */,
@@ -117,6 +120,14 @@
 				4899CB6F2A9F4F130022AEDC /* AddViewController.swift */,
 			);
 			path = Add;
+			sourceTree = "<group>";
+		};
+		4899CB772A9F55D80022AEDC /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				4899CB782A9F55E10022AEDC /* Alert.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +215,7 @@
 				4899CB722A9F518D0022AEDC /* SearchView.swift in Sources */,
 				4899CB632A9F4D090022AEDC /* BaseViewController.swift in Sources */,
 				4899CB702A9F4F130022AEDC /* AddViewController.swift in Sources */,
+				4899CB792A9F55E10022AEDC /* Alert.swift in Sources */,
 				4899CB4F2A9F4CB10022AEDC /* ViewController.swift in Sources */,
 				4899CB4B2A9F4CB10022AEDC /* AppDelegate.swift in Sources */,
 				4899CB4D2A9F4CB10022AEDC /* SceneDelegate.swift in Sources */,

@@ -16,6 +16,7 @@ class AddView: BaseView {
         let imageView = UIImageView()
         
         imageView.backgroundColor = .lightGray
+        imageView.contentMode = .scaleAspectFill
         
         return imageView
     }()
@@ -23,7 +24,7 @@ class AddView: BaseView {
     let searchButton = {
         let button = UIButton()
             
-        button.setTitle("이미지 버튼", for: .normal)
+        button.setTitle("Search Button", for: .normal)
         button.backgroundColor = .green
         
         return button
@@ -41,7 +42,7 @@ class AddView: BaseView {
         
         posterImageView.snp.makeConstraints { make in
             make.top.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(20)
-            make.height.equalTo(200)
+            make.height.equalTo(300)
         }
         
         searchButton.snp.makeConstraints { make in
