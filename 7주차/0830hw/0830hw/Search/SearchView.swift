@@ -12,6 +12,14 @@ import UIKit
 
 class SearchView: BaseView {
     
+    let searchBar = {
+        let searchBar = UISearchBar()
+        
+        searchBar.placeholder = "검색어를 입력해주세요"
+        
+        return searchBar
+    }()
+    
     lazy var collectionView = {
         
         let view = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout())
@@ -24,14 +32,21 @@ class SearchView: BaseView {
     override func setConfigure() {
         super.setConfigure()
         
+        addSubview(searchBar)
         addSubview(collectionView)
     }
     
     override func setConstraints() {
         super.setConstraints()
         
+        searchBar.snp.makeConstraints { make in
+            make.top.horizontalEdges.equalTo(self.safeAreaLayoutGuide)
+            make.height.equalTo(50)
+        }
         collectionView.snp.makeConstraints { make in
-            make.edges.equalTo(self.safeAreaLayoutGuide)
+            make.top.equalTo(searchBar.snp.bottom).offset(20)
+            make.horizontalEdges.equalTo(self.safeAreaLayoutGuide)
+            make.bottom.equalTo(self.safeAreaLayoutGuide)
         }
     }
     

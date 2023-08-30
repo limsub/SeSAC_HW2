@@ -25,6 +25,10 @@
 		4899CB762A9F519B0022AEDC /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899CB752A9F519B0022AEDC /* SearchCollectionViewCell.swift */; };
 		4899CB792A9F55E10022AEDC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899CB782A9F55E10022AEDC /* Alert.swift */; };
 		4899CB7C2A9F7AFC0022AEDC /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4899CB7B2A9F7AFC0022AEDC /* .gitignore */; };
+		4899CB7E2A9F7B250022AEDC /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899CB7D2A9F7B250022AEDC /* APIKey.swift */; };
+		48F0F66B2A9F7BC30053E97F /* UnsplashAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F0F66A2A9F7BC30053E97F /* UnsplashAPIManager.swift */; };
+		48F0F66D2A9F7C720053E97F /* AboutUnsplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F0F66C2A9F7C720053E97F /* AboutUnsplash.swift */; };
+		48F0F6702A9F7DE60053E97F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 48F0F66F2A9F7DE60053E97F /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,9 @@
 		4899CB752A9F519B0022AEDC /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		4899CB782A9F55E10022AEDC /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		4899CB7B2A9F7AFC0022AEDC /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		4899CB7D2A9F7B250022AEDC /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		48F0F66A2A9F7BC30053E97F /* UnsplashAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPIManager.swift; sourceTree = "<group>"; };
+		48F0F66C2A9F7C720053E97F /* AboutUnsplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUnsplash.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48F0F6702A9F7DE60053E97F /* Alamofire in Frameworks */,
 				4899CB6B2A9F4D3C0022AEDC /* Kingfisher in Frameworks */,
 				4899CB682A9F4D2F0022AEDC /* SnapKit in Frameworks */,
 			);
@@ -137,6 +145,9 @@
 		4899CB7A2A9F7AEA0022AEDC /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				4899CB7D2A9F7B250022AEDC /* APIKey.swift */,
+				48F0F66A2A9F7BC30053E97F /* UnsplashAPIManager.swift */,
+				48F0F66C2A9F7C720053E97F /* AboutUnsplash.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -160,6 +171,7 @@
 			packageProductDependencies = (
 				4899CB672A9F4D2F0022AEDC /* SnapKit */,
 				4899CB6A2A9F4D3C0022AEDC /* Kingfisher */,
+				48F0F66F2A9F7DE60053E97F /* Alamofire */,
 			);
 			productName = 0830hw;
 			productReference = 4899CB472A9F4CB10022AEDC /* 0830hw.app */;
@@ -192,6 +204,7 @@
 			packageReferences = (
 				4899CB662A9F4D2F0022AEDC /* XCRemoteSwiftPackageReference "SnapKit" */,
 				4899CB692A9F4D3C0022AEDC /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				48F0F66E2A9F7DE60053E97F /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 4899CB482A9F4CB10022AEDC /* Products */;
 			projectDirPath = "";
@@ -223,6 +236,7 @@
 			files = (
 				4899CB742A9F51920022AEDC /* SearchViewController.swift in Sources */,
 				4899CB6E2A9F4F0B0022AEDC /* AddView.swift in Sources */,
+				48F0F66B2A9F7BC30053E97F /* UnsplashAPIManager.swift in Sources */,
 				4899CB762A9F519B0022AEDC /* SearchCollectionViewCell.swift in Sources */,
 				4899CB722A9F518D0022AEDC /* SearchView.swift in Sources */,
 				4899CB632A9F4D090022AEDC /* BaseViewController.swift in Sources */,
@@ -231,7 +245,9 @@
 				4899CB4F2A9F4CB10022AEDC /* ViewController.swift in Sources */,
 				4899CB4B2A9F4CB10022AEDC /* AppDelegate.swift in Sources */,
 				4899CB4D2A9F4CB10022AEDC /* SceneDelegate.swift in Sources */,
+				48F0F66D2A9F7C720053E97F /* AboutUnsplash.swift in Sources */,
 				4899CB612A9F4D020022AEDC /* BaseView.swift in Sources */,
+				4899CB7E2A9F7B250022AEDC /* APIKey.swift in Sources */,
 				4899CB652A9F4D1D0022AEDC /* BaseCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +486,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		48F0F66E2A9F7DE60053E97F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -482,6 +506,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4899CB692A9F4D3C0022AEDC /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		48F0F66F2A9F7DE60053E97F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48F0F66E2A9F7DE60053E97F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
