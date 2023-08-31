@@ -20,9 +20,19 @@
         - UIImagePickerController / .photoLibrary
     - 웹에서 가져오기
         - Unsplash API (Alamofire + Codable / Singleton Pattern) 
-        - UISearchBar (responder)
+        - UISearchBaxr (responder)
         - KingFisher
         - Notification Center 값 전달 (addObserver / post)
+
+#### 0831pr
+- WebView (WebKit)
+    - navigation bar appearance
+- Animation
+- 값 전달 시 ARC
+    - delegate pattern
+    - closure
+    - weak 키워드 필요 x
+
 
 
 ## 6주차
