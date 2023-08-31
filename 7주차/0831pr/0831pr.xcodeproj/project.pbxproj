@@ -16,6 +16,8 @@
 		48A7F0FD2AA0A70900A7D69E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 48A7F0FC2AA0A70900A7D69E /* Alamofire */; };
 		48A7F1002AA0A71E00A7D69E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 48A7F0FF2AA0A71E00A7D69E /* SnapKit */; };
 		48A7F1022AA0A74800A7D69E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A7F1012AA0A74800A7D69E /* WebViewController.swift */; };
+		48A7F1042AA0AC3400A7D69E /* SmallWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A7F1032AA0AC3400A7D69E /* SmallWebViewController.swift */; };
+		48A7F1072AA0AD4500A7D69E /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A7F1062AA0AD4500A7D69E /* AnimationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		48A7F0F22AA0A6D800A7D69E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48A7F0F42AA0A6D800A7D69E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48A7F1012AA0A74800A7D69E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		48A7F1032AA0AC3400A7D69E /* SmallWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWebViewController.swift; sourceTree = "<group>"; };
+		48A7F1062AA0AD4500A7D69E /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 		48A7F0E52AA0A6D600A7D69E /* 0831pr */ = {
 			isa = PBXGroup;
 			children = (
+				48A7F1052AA0AD3B00A7D69E /* Animation */,
 				48A7F0FA2AA0A6FA00A7D69E /* WebView */,
 				48A7F0E62AA0A6D600A7D69E /* AppDelegate.swift */,
 				48A7F0E82AA0A6D600A7D69E /* SceneDelegate.swift */,
@@ -78,8 +83,17 @@
 			isa = PBXGroup;
 			children = (
 				48A7F1012AA0A74800A7D69E /* WebViewController.swift */,
+				48A7F1032AA0AC3400A7D69E /* SmallWebViewController.swift */,
 			);
 			path = WebView;
+			sourceTree = "<group>";
+		};
+		48A7F1052AA0AD3B00A7D69E /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				48A7F1062AA0AD4500A7D69E /* AnimationViewController.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,7 +178,9 @@
 				48A7F0EB2AA0A6D600A7D69E /* ViewController.swift in Sources */,
 				48A7F0E72AA0A6D600A7D69E /* AppDelegate.swift in Sources */,
 				48A7F0E92AA0A6D600A7D69E /* SceneDelegate.swift in Sources */,
+				48A7F1072AA0AD4500A7D69E /* AnimationViewController.swift in Sources */,
 				48A7F1022AA0A74800A7D69E /* WebViewController.swift in Sources */,
+				48A7F1042AA0AC3400A7D69E /* SmallWebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
