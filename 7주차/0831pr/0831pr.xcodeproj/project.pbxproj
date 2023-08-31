@@ -18,6 +18,10 @@
 		48A7F1022AA0A74800A7D69E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A7F1012AA0A74800A7D69E /* WebViewController.swift */; };
 		48A7F1042AA0AC3400A7D69E /* SmallWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A7F1032AA0AC3400A7D69E /* SmallWebViewController.swift */; };
 		48A7F1072AA0AD4500A7D69E /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A7F1062AA0AD4500A7D69E /* AnimationViewController.swift */; };
+		48A7F10A2AA0B11D00A7D69E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A7F1092AA0B11D00A7D69E /* FirstViewController.swift */; };
+		48A7F10C2AA0B12300A7D69E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A7F10B2AA0B12300A7D69E /* SecondViewController.swift */; };
+		48A7F10E2AA0B12C00A7D69E /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A7F10D2AA0B12C00A7D69E /* ThirdViewController.swift */; };
+		48A7F1112AA0B95700A7D69E /* SendDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A7F1102AA0B95700A7D69E /* SendDataProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		48A7F1012AA0A74800A7D69E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		48A7F1032AA0AC3400A7D69E /* SmallWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWebViewController.swift; sourceTree = "<group>"; };
 		48A7F1062AA0AD4500A7D69E /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
+		48A7F1092AA0B11D00A7D69E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		48A7F10B2AA0B12300A7D69E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		48A7F10D2AA0B12C00A7D69E /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		48A7F1102AA0B95700A7D69E /* SendDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDataProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,7 @@
 		48A7F0E52AA0A6D600A7D69E /* 0831pr */ = {
 			isa = PBXGroup;
 			children = (
+				48A7F1082AA0B11000A7D69E /* ARCTest */,
 				48A7F1052AA0AD3B00A7D69E /* Animation */,
 				48A7F0FA2AA0A6FA00A7D69E /* WebView */,
 				48A7F0E62AA0A6D600A7D69E /* AppDelegate.swift */,
@@ -94,6 +103,17 @@
 				48A7F1062AA0AD4500A7D69E /* AnimationViewController.swift */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		48A7F1082AA0B11000A7D69E /* ARCTest */ = {
+			isa = PBXGroup;
+			children = (
+				48A7F1092AA0B11D00A7D69E /* FirstViewController.swift */,
+				48A7F10B2AA0B12300A7D69E /* SecondViewController.swift */,
+				48A7F10D2AA0B12C00A7D69E /* ThirdViewController.swift */,
+				48A7F1102AA0B95700A7D69E /* SendDataProtocol.swift */,
+			);
+			path = ARCTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,12 +195,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48A7F10C2AA0B12300A7D69E /* SecondViewController.swift in Sources */,
+				48A7F10E2AA0B12C00A7D69E /* ThirdViewController.swift in Sources */,
 				48A7F0EB2AA0A6D600A7D69E /* ViewController.swift in Sources */,
 				48A7F0E72AA0A6D600A7D69E /* AppDelegate.swift in Sources */,
 				48A7F0E92AA0A6D600A7D69E /* SceneDelegate.swift in Sources */,
 				48A7F1072AA0AD4500A7D69E /* AnimationViewController.swift in Sources */,
 				48A7F1022AA0A74800A7D69E /* WebViewController.swift in Sources */,
+				48A7F1112AA0B95700A7D69E /* SendDataProtocol.swift in Sources */,
 				48A7F1042AA0AC3400A7D69E /* SmallWebViewController.swift in Sources */,
+				48A7F10A2AA0B11D00A7D69E /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
