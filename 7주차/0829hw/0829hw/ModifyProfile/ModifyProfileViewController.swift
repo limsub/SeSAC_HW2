@@ -60,7 +60,7 @@ class ModifyProfileViewController: BaseViewController {
         print("hi username")
         let vc = UserNameViewController()
         // 3.
-        vc.completionHandler = { str in
+        vc.completionHandler = { [self] str in
             self.mainView.userNameButton.setTitle(str, for: .normal)
         }
         navigationController?.pushViewController(vc, animated: true)

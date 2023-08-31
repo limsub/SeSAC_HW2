@@ -64,6 +64,7 @@ class AddViewController: BaseViewController {
     
     // 다음 화면 전환 (형식상 매개변수 - 타입 UIAlertAction)
     func nextPage(_ sender: UIAlertAction) {
+//        sender.title = 웹에서 검색하기
         let vc = SearchViewController()
 
         present(vc, animated: true)
@@ -91,6 +92,9 @@ class AddViewController: BaseViewController {
         
         let gallery = UIAlertAction(title: "갤러리에서 가져오기", style: .default, handler: accessGallery)
         let web = UIAlertAction(title: "웹에서 검색하기", style: .default, handler: nextPage)
+//        let web = UIAlertAction(title: "", style: .default) { UIAlertAction in
+//            nextPage
+//        }
         let cancel = UIAlertAction(title: "취소", style: .cancel)
         
         actionSheet.addAction(gallery)
