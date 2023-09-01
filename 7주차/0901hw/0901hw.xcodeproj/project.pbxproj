@@ -25,6 +25,11 @@
 		48A7F14B2AA1B49A00A7D69E /* FirstProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A7F14A2AA1B49A00A7D69E /* FirstProtocol.swift */; };
 		48A7F14D2AA1B49F00A7D69E /* SecondProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A7F14C2AA1B49F00A7D69E /* SecondProtocol.swift */; };
 		48A7F14F2AA1BE4C00A7D69E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A7F14E2AA1BE4C00A7D69E /* HomeViewController.swift */; };
+		48A7F1522AA1CEAD00A7D69E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 48A7F1512AA1CEAD00A7D69E /* .gitignore */; };
+		48A7F1542AA1CEBB00A7D69E /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A7F1532AA1CEBB00A7D69E /* APIKey.swift */; };
+		48A7F1562AA1CEF700A7D69E /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A7F1552AA1CEF700A7D69E /* About.swift */; };
+		48A7F1582AA1CF7B00A7D69E /* APIManagerClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A7F1572AA1CF7B00A7D69E /* APIManagerClosure.swift */; };
+		48A7F15A2AA1EBC800A7D69E /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A7F1592AA1EBC800A7D69E /* LoadingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +52,11 @@
 		48A7F14A2AA1B49A00A7D69E /* FirstProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstProtocol.swift; sourceTree = "<group>"; };
 		48A7F14C2AA1B49F00A7D69E /* SecondProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondProtocol.swift; sourceTree = "<group>"; };
 		48A7F14E2AA1BE4C00A7D69E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		48A7F1512AA1CEAD00A7D69E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		48A7F1532AA1CEBB00A7D69E /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		48A7F1552AA1CEF700A7D69E /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		48A7F1572AA1CF7B00A7D69E /* APIManagerClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerClosure.swift; sourceTree = "<group>"; };
+		48A7F1592AA1EBC800A7D69E /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +90,7 @@
 		48A7F11D2AA1AC9500A7D69E /* 0901hw */ = {
 			isa = PBXGroup;
 			children = (
+				48A7F1502AA1CE9F00A7D69E /* Network */,
 				48A7F13F2AA1AF6800A7D69E /* Practice */,
 				48A7F1332AA1AD1500A7D69E /* Base */,
 				48A7F1322AA1AD0F00A7D69E /* Home */,
@@ -90,6 +101,7 @@
 				48A7F1272AA1AC9700A7D69E /* Assets.xcassets */,
 				48A7F1292AA1AC9700A7D69E /* LaunchScreen.storyboard */,
 				48A7F12C2AA1AC9700A7D69E /* Info.plist */,
+				48A7F1512AA1CEAD00A7D69E /* .gitignore */,
 			);
 			path = 0901hw;
 			sourceTree = "<group>";
@@ -124,6 +136,17 @@
 				48A7F14C2AA1B49F00A7D69E /* SecondProtocol.swift */,
 			);
 			path = Practice;
+			sourceTree = "<group>";
+		};
+		48A7F1502AA1CE9F00A7D69E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				48A7F1532AA1CEBB00A7D69E /* APIKey.swift */,
+				48A7F1552AA1CEF700A7D69E /* About.swift */,
+				48A7F1572AA1CF7B00A7D69E /* APIManagerClosure.swift */,
+				48A7F1592AA1EBC800A7D69E /* LoadingViewController.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +213,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48A7F1522AA1CEAD00A7D69E /* .gitignore in Resources */,
 				48A7F12B2AA1AC9700A7D69E /* LaunchScreen.storyboard in Resources */,
 				48A7F1282AA1AC9700A7D69E /* Assets.xcassets in Resources */,
 				48A7F1262AA1AC9500A7D69E /* Main.storyboard in Resources */,
@@ -204,9 +228,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				48A7F14B2AA1B49A00A7D69E /* FirstProtocol.swift in Sources */,
+				48A7F1562AA1CEF700A7D69E /* About.swift in Sources */,
 				48A7F1412AA1AF7200A7D69E /* FirstView.swift in Sources */,
 				48A7F14D2AA1B49F00A7D69E /* SecondProtocol.swift in Sources */,
 				48A7F1392AA1AD3000A7D69E /* BaseViewController.swift in Sources */,
+				48A7F15A2AA1EBC800A7D69E /* LoadingViewController.swift in Sources */,
+				48A7F1542AA1CEBB00A7D69E /* APIKey.swift in Sources */,
 				48A7F1232AA1AC9500A7D69E /* ViewController.swift in Sources */,
 				48A7F14F2AA1BE4C00A7D69E /* HomeViewController.swift in Sources */,
 				48A7F1452AA1AF9500A7D69E /* SecondView.swift in Sources */,
@@ -215,6 +242,7 @@
 				48A7F1492AA1AFAA00A7D69E /* PracticeCollectionViewCell.swift in Sources */,
 				48A7F1212AA1AC9500A7D69E /* SceneDelegate.swift in Sources */,
 				48A7F1372AA1AD2900A7D69E /* BaseView.swift in Sources */,
+				48A7F1582AA1CF7B00A7D69E /* APIManagerClosure.swift in Sources */,
 				48A7F1472AA1AF9B00A7D69E /* SecondViewController.swift in Sources */,
 				48A7F13B2AA1AD3900A7D69E /* BaseCollectionViewCell.swift in Sources */,
 			);
