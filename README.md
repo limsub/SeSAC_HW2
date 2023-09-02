@@ -34,6 +34,17 @@
     - weak 키워드 필요 x
 
 
+#### 0901hw
+- View & ViewController 역할 분담
+    - CollectionViewCell Protocol
+    - 값 전달 (delegate) + weak 키워드
+    - ARC
+- URLSession
+    - .shared
+    - .default
+        - loading buffer
+ 
+<br>
 
 ## 6주차
 #### 0822hw

@@ -28,6 +28,7 @@ class LoadingViewController: UIViewController {
         let view = UILabel()
         view.layer.borderColor = UIColor.black.cgColor
         view.layer.borderWidth = 1
+        view.textAlignment = .center
         return view
     }()
     
@@ -35,6 +36,13 @@ class LoadingViewController: UIViewController {
         let view = UIImageView()
         view.backgroundColor = .lightGray
         return view
+    }()
+    
+    let button = {
+        let button = UIButton()
+        
+        button.backgroundColor = .blue
+        return button
     }()
     
     
@@ -47,6 +55,10 @@ class LoadingViewController: UIViewController {
         view.backgroundColor = .white
         view.addSubview(progressLabel)
         view.addSubview(imageView)
+        
+        view.addSubview(button)
+        
+        
         progressLabel.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(100)
             make.horizontalEdges.equalTo(view).inset(30)
@@ -58,6 +70,11 @@ class LoadingViewController: UIViewController {
             make.width.equalTo(imageView.snp.height)
         }
         
+        button.snp.makeConstraints { make in
+            make.edges.equalTo(view).inset(100)
+        }
+        button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
+        
         /* ============ 네트워크 통신 ============ */
         let url = URL(string: "https://apod.nasa.gov/apod/image/2308/M66_JwstTomlinson_3521.jpg")
         
@@ -68,6 +85,28 @@ class LoadingViewController: UIViewController {
         )
         
         session.dataTask(with: url!).resume()
+//        session.dataTask(with: url!).resume()
+//        session.dataTask(with: url!).resume()
+        
+    }
+    
+    @objc
+    func buttonClicked(){
+        print("hi")
+        session.finishTasksAndInvalidate()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        // 취소 액션 (화면이 사라질 때 등)
+        // 리소스 정리. 실행중(다운로드중)이든 뭐든 바로 무시
+        session.invalidateAndCancel()   // 무효화 시키고 취소를 해라
+        
+        // 진행중인 것 까지만 다운로드 완료하고, 중지하고 싶어 (사진 3개 받는데, 첫 번째 거는 거의 다 받았어)
+        // 기다렸다가 리소스 끝나면 정리
+        session.finishTasksAndInvalidate()
+        
         
     }
 }
