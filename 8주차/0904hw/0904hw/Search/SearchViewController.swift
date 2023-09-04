@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SearchViewController: BaseViewController {
     
@@ -112,6 +113,35 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let realm = try! Realm()
+        
+        let title = (data[indexPath.row].title != "") ? data[indexPath.row].title : "제목 없음"
+        
+        var contents = "내용 없음"
+        if let authors = data[indexPath.row].authors, let price = data[indexPath.row].price {
+            
+            var authorString = ""
+            authors.forEach { item in
+                authorString += item
+                authorString += " "
+            }
+            
+            contents = authorString
+        }
+        
+        let imageURL = data[indexPath.row].thumbnail
+        
+        
+        let task = BookTable(title: title!, contents: contents, imageURL: imageURL!)
+        
+        try! realm.write {
+            realm.add(task)
+        }
+        
+        navigationController?.popViewController(animated: true)
     }
 }
 

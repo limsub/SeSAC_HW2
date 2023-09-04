@@ -6,8 +6,14 @@
 //
 
 import UIKit
+import RealmSwift
+import Kingfisher
+
 
 class HomeViewController: BaseViewController {
+    
+    
+    var tasks: Results<BookTable>!
     
     // 인스턴스 (컬렉션뷰)
     lazy var collectionView = {
@@ -30,6 +36,19 @@ class HomeViewController: BaseViewController {
     
     
     // viewDidLoad
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let realm = try! Realm()
+        
+        tasks = realm.objects(BookTable.self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        collectionView.reloadData()
+    }
     
     
     // set  (라이트바버튼아이템)
@@ -83,11 +102,27 @@ class HomeViewController: BaseViewController {
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        
+        if let tasks {
+            return tasks.count
+        }
+        else { return 0 }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.reuseIdentifier, for: indexPath) as? HomeCollectionViewCell else { return UICollectionViewCell() }
+        
+        
+        
+        let data = tasks[indexPath.row]
+        
+        cell.titleLabel.text = data.title
+        cell.contentLabel.text = data.contents
+        
+        let imageURL = URL(string: data.imageURL)
+        cell.imageView.kf.setImage(with: imageURL)
+        
         
         return cell
     }
