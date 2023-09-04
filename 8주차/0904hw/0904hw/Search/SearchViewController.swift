@@ -39,6 +39,15 @@ class SearchViewController: BaseViewController {
     // 뷰디드로드
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        KakaoAPIManager.shared.callRequest(query: "a") { books in
+            guard let books = books else {
+                print("ERROR")
+                return
+            }
+            
+            print(books)
+        }
     }
     
     

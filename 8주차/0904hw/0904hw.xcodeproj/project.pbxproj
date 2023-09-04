@@ -27,6 +27,7 @@
 		488AAFF82AA5A5AA00297070 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488AAFF72AA5A5AA00297070 /* HomeCollectionViewCell.swift */; };
 		488AAFFA2AA5A5B800297070 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488AAFF92AA5A5B800297070 /* SearchTableViewCell.swift */; };
 		488AAFFF2AA5AB0F00297070 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488AAFFE2AA5AB0F00297070 /* SearchViewController.swift */; };
+		488AB0012AA5B08D00297070 /* AboutBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488AB0002AA5B08D00297070 /* AboutBook.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		488AAFF72AA5A5AA00297070 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		488AAFF92AA5A5B800297070 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		488AAFFE2AA5AB0F00297070 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		488AB0002AA5B08D00297070 /* AboutBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutBook.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				4857F8A82AA5A27C00D5255B /* APIKey.swift */,
 				4857F8AA2AA5A28400D5255B /* KakaoAPIManager.swift */,
+				488AB0002AA5B08D00297070 /* AboutBook.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			files = (
 				4857F88E2AA5A1C400D5255B /* ViewController.swift in Sources */,
 				4857F8B32AA5A2EA00D5255B /* BaseCollectionViewCell.swift in Sources */,
+				488AB0012AA5B08D00297070 /* AboutBook.swift in Sources */,
 				4857F88A2AA5A1C400D5255B /* AppDelegate.swift in Sources */,
 				4857F8A92AA5A27C00D5255B /* APIKey.swift in Sources */,
 				4857F8AB2AA5A28400D5255B /* KakaoAPIManager.swift in Sources */,
