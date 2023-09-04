@@ -32,8 +32,19 @@ class ModifyProfileViewController: BaseViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(newIntroduction), name: NSNotification.Name("introduction"), object: nil)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(
+            self,
+            name: NSNotification.Name("introduction"),
+            object: nil
+        )
+    }
+    
     @objc
     func newIntroduction(notification: NSNotification) {
+        print("add Observer 실행")
         if let intro = notification.userInfo?["new intro"] as? String {
             mainView.introButton.setTitle(intro, for: .normal)
         }
@@ -60,7 +71,7 @@ class ModifyProfileViewController: BaseViewController {
         print("hi username")
         let vc = UserNameViewController()
         // 3.
-        vc.completionHandler = { [self] str in
+        vc.completionHandler = { str in
             self.mainView.userNameButton.setTitle(str, for: .normal)
         }
         navigationController?.pushViewController(vc, animated: true)
@@ -69,6 +80,18 @@ class ModifyProfileViewController: BaseViewController {
     @objc
     func introButtonClicked() {
         print("hi intro")
+        
+//        /* 정바향 값전달 테스트 */
+//        NotificationCenter.default.post(
+//            name: NSNotification.Name(rawValue: "sendDataForward"),
+//            object: nil,
+//            userInfo: ["forward Data": "this is forward"]
+//        )
+        
+        // 1.
+        NotificationCenter.default.addObserver(self, selector: #selector(newIntroduction), name: NSNotification.Name("introduction"), object: nil)
+        
+        
         let vc = IntroViewController()
         navigationController?.pushViewController(vc, animated: true)
     }

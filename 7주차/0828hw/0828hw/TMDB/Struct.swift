@@ -8,6 +8,9 @@
 import Foundation
 
 
+
+
+
 /* ==================== 영화 리스트 ==================== */
 struct MovieList: Codable {
     let page: Int
@@ -23,18 +26,18 @@ struct MovieList: Codable {
 
 // MARK: - Result
 struct Result: Codable {
-    let video: Bool
-    let voteCount: Int
-    let overview, releaseDate: String
-    let voteAverage: Double
-    let genreIDS: [Int]
-    let originalTitle, backdropPath, posterPath: String
-    let id: Int
-    let mediaType: MediaType
-    let originalLanguage: String
-    let popularity: Double
-    let title: String
-    let adult: Bool
+    let video: Bool?
+    let voteCount: Int?
+    let overview, releaseDate: String?
+    let voteAverage: Double?
+    let genreIDS: [Int]?
+    let originalTitle, backdropPath, posterPath: String?
+    let id: Int?
+    let mediaType: String?
+    let originalLanguage: String?
+    let popularity: Double?
+    let title: String?
+    let adult: Bool?
 
     enum CodingKeys: String, CodingKey {
         case video
@@ -53,9 +56,9 @@ struct Result: Codable {
     }
 }
 
-enum MediaType: String, Codable {
-    case movie = "movie"
-}
+//enum MediaType: String, Codable {
+//    case movie = "movie"
+//}
 
 
 

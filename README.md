@@ -43,6 +43,7 @@
     - .shared
     - .default
         - loading buffer
+    - KingFisher 없이 이미지 다운
  
 <br>
 

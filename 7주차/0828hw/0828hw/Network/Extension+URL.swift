@@ -16,6 +16,7 @@ extension URL {
 }
 
 enum Endpoint {
+    case all
     case movieTrend
     case movieGenre
     case movieDetail
@@ -23,6 +24,8 @@ enum Endpoint {
     
     var requestURL: String {
         switch self {
+        case .all:
+            return URL.makeEndPointString("trending/all/week?language=en-US")
         case .movieTrend:
             return URL.makeEndPointString("trending/movie/week?language=en-US")
         case .movieGenre:

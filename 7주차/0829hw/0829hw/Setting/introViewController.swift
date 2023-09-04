@@ -24,7 +24,28 @@ class IntroViewController: BaseViewController {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "완료", style: .plain, target: self, action: #selector(completeButtonClicked))
+        
+//        /* 정방향 값전달 테스트 */
+//        NotificationCenter.default.addObserver(
+//            self,
+//            selector: #selector(printData),
+//            name: NSNotification.Name("sendDataForward"),
+//            object: nil
+//        )
     }
+    
+    @objc
+    func printData(notification: NSNotification) {
+        print("hi")
+        if let data = notification.userInfo?["forward Data"] as? String {
+            print(data)
+        } else {
+            print("NotificationCenter 정방향 값전달 실패. data = nil")
+        }
+    }
+
+    
+    
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -39,6 +60,14 @@ class IntroViewController: BaseViewController {
     
     @objc
     func completeButtonClicked() {
+        
+//        /* 정바향 값전달 테스트 */
+//        NotificationCenter.default.post(
+//            name: NSNotification.Name(rawValue: "sendDataForward"),
+//            object: nil,
+//            userInfo: ["forward Data": "this is forward"]
+//        )
+        
         
         navigationController?.popViewController(animated: true)
     }

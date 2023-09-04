@@ -66,9 +66,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         cell.titleLabel.text = item.title
         cell.dateLabel.text = item.releaseDate
         //cell.subtitleLabel.text = item.originalTitle
-        cell.voteLabel.text = String(item.voteAverage)
+        cell.voteLabel.text = String(item.voteAverage!)
         
-        let url = URL(string: Endpoint.imagePrefix.requestURL + item.backdropPath)
+        let url = URL(string: Endpoint.imagePrefix.requestURL + item.backdropPath!)
         cell.posterImageView.kf.setImage(with: url)
         
         

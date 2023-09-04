@@ -16,6 +16,7 @@ class APIManager {
     
     let header: HTTPHeaders = ["Authorization" : APIKey.tmdb]
     
+
     
     func callMovies(completionHandler: @escaping (MovieList) -> Void ) {
         let url = Endpoint.movieTrend.requestURL
