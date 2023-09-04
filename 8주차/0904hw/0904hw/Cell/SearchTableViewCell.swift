@@ -20,15 +20,18 @@ class SearchTableViewCell: BaseTableViewCell {
     let titleLabel = {
         let label = UILabel()
         
-        label.text = "타이틀 타이틀"
-        
         return label
     }()
     
     let contentLabel = {
         let label = UILabel()
         
-        label.text = "컨텐츠 컨텐츠"
+        label.numberOfLines = 0
+        
+//        label.layer.borderColor = UIColor.black.cgColor
+//        label.layer.borderWidth = 1
+        
+        label.contentMode = .topLeft
         
         return label
     }()
@@ -37,8 +40,7 @@ class SearchTableViewCell: BaseTableViewCell {
     override func setConfigure() {
         super.setConfigure()
         
-        contentView.backgroundColor = .darkGray
-        
+
         contentView.addSubview(posterImageView)
         contentView.addSubview(titleLabel)
         contentView.addSubview(contentLabel)
@@ -54,14 +56,16 @@ class SearchTableViewCell: BaseTableViewCell {
         
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(posterImageView)
-            make.leading.equalTo(posterImageView.snp.trailing).offset(5)
+            make.height.equalTo(20)
+            make.leading.equalTo(posterImageView.snp.trailing).offset(10)
             make.trailing.equalTo(contentView).inset(5)
         }
         
         contentLabel.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).offset(5)
-            make.leading.equalTo(posterImageView.snp.trailing).offset(5)
+            make.leading.equalTo(posterImageView.snp.trailing).offset(10)
             make.trailing.equalTo(contentView).inset(5)
+            make.bottom.greaterThanOrEqualTo(contentView).inset(5)
         }
     }
     

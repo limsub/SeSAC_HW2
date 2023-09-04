@@ -9,8 +9,8 @@ import Foundation
 
 
 struct Book: Codable {
-    let documents: [Document]?
-    let meta: Meta?
+    let documents: [Document]
+    let meta: Meta
 }
 
 // MARK: - Document

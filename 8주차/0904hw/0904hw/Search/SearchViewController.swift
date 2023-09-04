@@ -9,11 +9,17 @@ import UIKit
 
 class SearchViewController: BaseViewController {
     
+    // 데이터
+    var data: [Document] = []
+    
+    
     // 인스턴스 (서치바, 테이블뷰(lazy var))
-    let searchBar = {
+    lazy var searchBar = {
         let bar = UISearchBar()
         
         bar.placeholder = "검색어를 입력하세요"
+        bar.delegate = self;
+        
         
         return bar
     }()
@@ -29,7 +35,9 @@ class SearchViewController: BaseViewController {
         view.dataSource = self;
         
         // rowHeight
-        view.rowHeight = 150
+        view.rowHeight = 170
+        
+        
         
         return view
     }()
@@ -40,14 +48,6 @@ class SearchViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        KakaoAPIManager.shared.callRequest(query: "a") { books in
-            guard let books = books else {
-                print("ERROR")
-                return
-            }
-            
-            print(books)
-        }
     }
     
     
@@ -78,14 +78,63 @@ class SearchViewController: BaseViewController {
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.reuseIdentifier) as? SearchTableViewCell else { return UITableViewCell() }
         
+        cell.titleLabel.text = (data[indexPath.row].title != "") ? data[indexPath.row].title : "제목 없음"
+        
+        if let authors = data[indexPath.row].authors, let price = data[indexPath.row].price {
+            
+            var authorString = ""
+            authors.forEach { item in
+                authorString += item
+                authorString += " "
+            }
+            
+            cell.contentLabel.text = "작가 : \(authorString)\n가격 : \(price)"
+        }
+        
+        // kingfisher 없이 이미지 다운로드
+        let thumb = data[indexPath.row].thumbnail
+        let url = URL(string: thumb!)
+        DispatchQueue.global().async {
+            
+            if let url {
+                let data = try! Data(contentsOf: url)
+                
+                DispatchQueue.main.async {
+                    cell.posterImageView.image = UIImage(data: data)
+                }
+            }
+        }
+        
         return cell
     }
-    
-    
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        guard let query = searchBar.text else { return }
+        
+        if (query == "") {
+            tableView.reloadData()
+        }
+        else {
+            KakaoAPIManager.shared.callRequest(query: query) { books in
+                guard let books = books else {
+                    print("ERROR")
+                    return
+                }
+                
+                DispatchQueue.main.async {
+                    self.data = books.documents
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
 }
