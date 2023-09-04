@@ -1,5 +1,22 @@
 # SeSAC_HW2
 
+## 8주차
+#### 0904hw
+- Kakao Book Search API
+    - ReusableProtocol (identifier)
+    - URLSession
+        - URLRequest
+        - URLComponent
+        - HeaderFields
+    - 이미지 다운
+        - KingFisher 사용 o
+        - KingFisher 사용 x
+    - Realm Model
+        - transaction 보장
+        - CREATE, READ
+
+
+
 
 ## 7주차
 #### 0828hw

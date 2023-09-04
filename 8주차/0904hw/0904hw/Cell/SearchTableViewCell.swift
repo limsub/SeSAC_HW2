@@ -28,9 +28,7 @@ class SearchTableViewCell: BaseTableViewCell {
         
         label.numberOfLines = 0
         
-//        label.layer.borderColor = UIColor.black.cgColor
-//        label.layer.borderWidth = 1
-        
+
         label.contentMode = .topLeft
         
         return label
@@ -65,7 +63,7 @@ class SearchTableViewCell: BaseTableViewCell {
             make.top.equalTo(titleLabel.snp.bottom).offset(5)
             make.leading.equalTo(posterImageView.snp.trailing).offset(10)
             make.trailing.equalTo(contentView).inset(5)
-            make.bottom.greaterThanOrEqualTo(contentView).inset(5)
+            make.bottom.lessThanOrEqualTo(contentView).inset(5)
         }
     }
     

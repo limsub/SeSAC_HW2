@@ -21,7 +21,6 @@ class SearchViewController: BaseViewController {
         bar.placeholder = "검색어를 입력하세요"
         bar.delegate = self;
         
-        
         return bar
     }()
     
@@ -38,12 +37,8 @@ class SearchViewController: BaseViewController {
         // rowHeight
         view.rowHeight = 170
         
-        
-        
         return view
     }()
-    
-    
     
     // 뷰디드로드
     override func viewDidLoad() {
@@ -59,6 +54,7 @@ class SearchViewController: BaseViewController {
         view.addSubview(searchBar)
         view.addSubview(tableView)
     }
+    
     override func setConstraints() {
         super.setConstraints()
         
@@ -73,6 +69,21 @@ class SearchViewController: BaseViewController {
             make.horizontalEdges.bottom.equalTo(view)
         }
     }
+    
+    // 옵셔널 뜯어내고 문자열 리턴
+    func makeTitle(_ title: String?) -> String {
+        guard let txt = title, txt.count != 0 else { return "제목 없음" }
+        return txt
+    }
+    func makeContent(_ authors: [String]?, _ price: Int?) -> String {
+        guard let authors = authors, let price = price, authors.count != 0 else { return "내용 없음" }
+        var authorString = ""
+        authors.forEach { item in
+            authorString += "\(item) "
+        }
+
+        return "작가 : \(authorString)\n가격 : \(price)"
+    }
 }
 
 
@@ -85,18 +96,9 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.reuseIdentifier) as? SearchTableViewCell else { return UITableViewCell() }
         
-        cell.titleLabel.text = (data[indexPath.row].title != "") ? data[indexPath.row].title : "제목 없음"
+        cell.titleLabel.text = makeTitle(data[indexPath.row].title)
+        cell.contentLabel.text = makeContent(data[indexPath.row].authors, data[indexPath.row].price)
         
-        if let authors = data[indexPath.row].authors, let price = data[indexPath.row].price {
-            
-            var authorString = ""
-            authors.forEach { item in
-                authorString += item
-                authorString += " "
-            }
-            
-            cell.contentLabel.text = "작가 : \(authorString)\n가격 : \(price)"
-        }
         
         // kingfisher 없이 이미지 다운로드
         let thumb = data[indexPath.row].thumbnail
@@ -115,27 +117,20 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let realm = try! Realm()
         
-        let title = (data[indexPath.row].title != "") ? data[indexPath.row].title : "제목 없음"
+        let title = makeTitle(data[indexPath.row].title)
+        let contents = makeContent(data[indexPath.row].authors, data[indexPath.row].price)
         
-        var contents = "내용 없음"
-        if let authors = data[indexPath.row].authors, let price = data[indexPath.row].price {
-            
-            var authorString = ""
-            authors.forEach { item in
-                authorString += item
-                authorString += " "
-            }
-            
-            contents = authorString
+        let task: BookTable
+        if let imageURL = data[indexPath.row].thumbnail {
+            task = BookTable(title: title, contents: contents, imageURL: imageURL)
+        } else {
+            task = BookTable(title: title, contents: contents, imageURL: "")
         }
-        
-        let imageURL = data[indexPath.row].thumbnail
-        
-        
-        let task = BookTable(title: title!, contents: contents, imageURL: imageURL!)
         
         try! realm.write {
             realm.add(task)

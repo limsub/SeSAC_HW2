@@ -12,7 +12,7 @@ class HomeCollectionViewCell: BaseCollectionViewCell {
     let imageView = {
         let view = UIImageView()
         
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .systemGray6
         
         return view
     }()
@@ -29,6 +29,13 @@ class HomeCollectionViewCell: BaseCollectionViewCell {
         let label = UILabel()
         
         label.text = "컨텐츠 컨텐츠"
+        label.numberOfLines = 0
+        
+        // 위쪽 정렬 어떻게 하냐
+//        label.contentMode = .top
+//        
+//        label.layer.borderColor = UIColor.black.cgColor
+//        label.layer.borderWidth = 1
         
         return label
     }()
@@ -37,7 +44,7 @@ class HomeCollectionViewCell: BaseCollectionViewCell {
     override func setConfigure() {
         super.setConfigure()
         
-        contentView.backgroundColor = .darkGray
+        contentView.backgroundColor = .lightGray
         
         contentView.addSubview(imageView)
         contentView.addSubview(titleLabel)
@@ -48,20 +55,22 @@ class HomeCollectionViewCell: BaseCollectionViewCell {
         super.setConstraints()
         
         imageView.snp.makeConstraints { make in
-            make.leading.top.bottom.equalTo(contentView).inset(5)
-            make.width.equalTo(imageView.snp.height).multipliedBy(0.7)
+            make.top.equalTo(contentView).offset(5)
+            make.horizontalEdges.equalTo(contentView).inset(30)
+            make.height.equalTo(imageView.snp.width).multipliedBy(1.3)
         }
         
         titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(imageView)
-            make.leading.equalTo(imageView.snp.trailing).offset(5)
-            make.trailing.equalTo(contentView).inset(5)
+            make.top.equalTo(imageView.snp.bottom).offset(5)
+            make.horizontalEdges.equalTo(contentView).inset(5)
+            make.height.equalTo(20)
         }
         
         contentLabel.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).offset(5)
-            make.leading.equalTo(imageView.snp.trailing).offset(5)
-            make.trailing.equalTo(contentView).inset(5)
+            make.horizontalEdges.equalTo(contentView).inset(5)
+            
+            make.bottom.lessThanOrEqualTo(contentView).inset(5)
         }
     }
 }

@@ -17,9 +17,6 @@ class BookTable: Object {
     @Persisted var contents: String
     @Persisted var imageURL: String
     
-    
-    
-    
     convenience init(title: String, contents: String, imageURL: String) {
         self.init()
         self.title = title
