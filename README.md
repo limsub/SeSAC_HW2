@@ -14,6 +14,11 @@
     - Realm Model
         - transaction 보장
         - CREATE, READ
+        - UPDATE, DELETE
+    - 이미지 관리 (.jpg로 도큐먼트에서 관리)
+        - saveImageToDocument
+        - loadImageFromDocument
+        - removeImageFromDocument
 
 
 

@@ -47,7 +47,7 @@ class HomeViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        print(tasks)
+        print(tasks)
         
         collectionView.reloadData()
     }
