@@ -12,7 +12,7 @@ import Kingfisher
 
 class HomeViewController: BaseViewController {
     
-    
+    let realm = try! Realm()
     var tasks: Results<BookTable>!
     
     // 인스턴스 (컬렉션뷰)
@@ -24,7 +24,7 @@ class HomeViewController: BaseViewController {
         view.register(HomeCollectionViewCell.self, forCellWithReuseIdentifier: HomeCollectionViewCell.reuseIdentifier)
         
         // protocol 연결
-        view.dataSource = self;
+        view.delegate = self;
         view.dataSource = self;
         
         
@@ -35,14 +35,19 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let realm = try! Realm()
+        
         
         tasks = realm.objects(BookTable.self).sorted(byKeyPath: "title", ascending: true)
         
+        
+        
+        print(realm.configuration.fileURL?.standardizedFileURL)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+//        print(tasks)
         
         collectionView.reloadData()
     }
@@ -57,9 +62,9 @@ class HomeViewController: BaseViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(searchButtonClicked))
         
         // 버튼 검정색이 안된다.. -> systemName으로 해야지 멍충아
-        navigationItem.rightBarButtonItem?.tintColor = .black
-        navigationController?.navigationBar.tintColor = .black
-        navigationItem.titleView?.tintColor = .black
+//        navigationItem.rightBarButtonItem?.tintColor = .black
+//        navigationController?.navigationBar.tintColor = .black
+//        navigationItem.titleView?.tintColor = .black
 
         view.addSubview(collectionView)
     }
@@ -88,7 +93,7 @@ class HomeViewController: BaseViewController {
         layout.minimumInteritemSpacing = 8
         
         let size = UIScreen.main.bounds.width - 24
-        layout.itemSize = CGSize(width: size / 2, height: size / 2 + 100)
+        layout.itemSize = CGSize(width: size / 2, height: size / 2 + 200)
         layout.sectionInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
         
         return layout
@@ -113,10 +118,28 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         cell.titleLabel.text = data.title
         cell.contentLabel.text = data.contents
+        cell.memoLabel.text = data.memo
         
-        let imageURL = URL(string: data.imageURL)
-        cell.imageView.kf.setImage(with: imageURL)
+        
+        /* ========== 이미지 다운로드 ========== */
+        // 9/4 kingFisher 이용
+//        let imageURL = URL(string: data.imageURL)
+//        cell.imageView.kf.setImage(with: imageURL)
+        
+        
+        // 9/5 도큐먼트에 저장된 실제 이미지 파일 이용
+        cell.imageView.image = loadImageFromDocument(fileName: "sub_\(tasks[indexPath.row]._id).jpg")
+        
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("hihi")
+        
+        let vc = DetailViewController()
+        vc.data = tasks[indexPath.row]
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

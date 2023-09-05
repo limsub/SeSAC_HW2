@@ -30,6 +30,8 @@
 		488AB0012AA5B08D00297070 /* AboutBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488AB0002AA5B08D00297070 /* AboutBook.swift */; };
 		488AB0042AA5C1AB00297070 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488AB0032AA5C1AB00297070 /* RealmModel.swift */; };
 		488AB0072AA5C5D700297070 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 488AB0062AA5C5D700297070 /* Kingfisher */; };
+		488AB00E2AA7123D00297070 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488AB00D2AA7123D00297070 /* FileManager+Extension.swift */; };
+		488AB0112AA71AA200297070 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488AB0102AA71AA200297070 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		488AAFFE2AA5AB0F00297070 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		488AB0002AA5B08D00297070 /* AboutBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutBook.swift; sourceTree = "<group>"; };
 		488AB0032AA5C1AB00297070 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		488AB00D2AA7123D00297070 /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
+		488AB0102AA71AA200297070 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 		4857F8882AA5A1C400D5255B /* 0904hw */ = {
 			isa = PBXGroup;
 			children = (
+				488AB00F2AA71A9900297070 /* Detail */,
+				488AB00C2AA7123300297070 /* Extension */,
 				488AB0022AA5C19D00297070 /* Realm */,
 				488AAFF62AA5A59500297070 /* Cell */,
 				488AAFF32AA5A4D700297070 /* Search */,
@@ -160,6 +166,22 @@
 				488AB0032AA5C1AB00297070 /* RealmModel.swift */,
 			);
 			path = Realm;
+			sourceTree = "<group>";
+		};
+		488AB00C2AA7123300297070 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				488AB00D2AA7123D00297070 /* FileManager+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		488AB00F2AA71A9900297070 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				488AB0102AA71AA200297070 /* DetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4857F88E2AA5A1C400D5255B /* ViewController.swift in Sources */,
+				488AB0112AA71AA200297070 /* DetailViewController.swift in Sources */,
 				4857F8B32AA5A2EA00D5255B /* BaseCollectionViewCell.swift in Sources */,
 				488AB0012AA5B08D00297070 /* AboutBook.swift in Sources */,
 				4857F88A2AA5A1C400D5255B /* AppDelegate.swift in Sources */,
@@ -254,6 +277,7 @@
 				488AAFF52AA5A52900297070 /* HomeViewController.swift in Sources */,
 				488AAFF82AA5A5AA00297070 /* HomeCollectionViewCell.swift in Sources */,
 				4857F8B12AA5A2E200D5255B /* BaseTableViewCell.swift in Sources */,
+				488AB00E2AA7123D00297070 /* FileManager+Extension.swift in Sources */,
 				488AAFFF2AA5AB0F00297070 /* SearchViewController.swift in Sources */,
 				4857F88C2AA5A1C400D5255B /* SceneDelegate.swift in Sources */,
 				488AAFFA2AA5A5B800297070 /* SearchTableViewCell.swift in Sources */,

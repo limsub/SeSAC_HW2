@@ -40,6 +40,20 @@ class HomeCollectionViewCell: BaseCollectionViewCell {
         return label
     }()
     
+    let memoLabel = {
+        let label = UILabel()
+        
+        label.text = "메모메모"
+        
+        return label
+    }()
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        imageView.image = nil
+    }
+    
     
     override func setConfigure() {
         super.setConfigure()
@@ -49,6 +63,7 @@ class HomeCollectionViewCell: BaseCollectionViewCell {
         contentView.addSubview(imageView)
         contentView.addSubview(titleLabel)
         contentView.addSubview(contentLabel)
+        contentView.addSubview(memoLabel)
     }
     
     override func setConstraints() {
@@ -71,6 +86,12 @@ class HomeCollectionViewCell: BaseCollectionViewCell {
             make.horizontalEdges.equalTo(contentView).inset(5)
             
             make.bottom.lessThanOrEqualTo(contentView).inset(5)
+        }
+        
+        memoLabel.snp.makeConstraints { make in
+            make.top.equalTo(contentLabel.snp.bottom).offset(5)
+            make.horizontalEdges.equalTo(contentView).inset(5)
+            make.height.equalTo(20)
         }
     }
 }

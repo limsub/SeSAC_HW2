@@ -38,7 +38,7 @@ class KakaoAPIManager {
         URLSession.shared.dataTask(with: request) { data, response, error in
             
             
-            print(request.allHTTPHeaderFields)
+//            print(request.allHTTPHeaderFields)
             
             // 1. error
             if let error { completionHandler(nil); return;}
