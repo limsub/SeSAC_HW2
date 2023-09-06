@@ -19,6 +19,12 @@
         - saveImageToDocument
         - loadImageFromDocument
         - removeImageFromDocument
+    - Repository Pattern
+        - new protocol / new class / 코드 수정
+    - Migration
+        - schemaVersion
+        - Automatic Update
+        - Manually Migration
 
 
 
