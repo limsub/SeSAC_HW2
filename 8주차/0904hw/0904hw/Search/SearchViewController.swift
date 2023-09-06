@@ -133,6 +133,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
             realm.add(task)
         }
         
+        
         // 사진 파일 저장 (도큐먼트)
         // 다시 String -> URL -> Data -> UIImage를 해서 매개변수에 넣어줘야 하나 했는데
         // 그렇게 해야 할 것 같다. 여기서 그 특정 셀의 이미지뷰에 접근할 수가 없다.
