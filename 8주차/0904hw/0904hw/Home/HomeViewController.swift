@@ -12,8 +12,11 @@ import Kingfisher
 
 class HomeViewController: BaseViewController {
     
-    let realm = try! Realm()
+    // 보여줄 데이터
     var tasks: Results<BookTable>!
+    
+    // repository pattern
+    let repository = BookTableRepository()
     
     // 인스턴스 (컬렉션뷰)
     lazy var collectionView = {
@@ -35,20 +38,15 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tasks = repository.fetch()
         
-        
-        tasks = realm.objects(BookTable.self).sorted(byKeyPath: "title", ascending: true)
-        
-        
-        
-        print(realm.configuration.fileURL?.standardizedFileURL)
+        repository.printURL()
+        repository.checkSchemaVersion()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        print(tasks)
-        
+                
         collectionView.reloadData()
     }
     
@@ -60,11 +58,6 @@ class HomeViewController: BaseViewController {
         title = "Book Warm Project"
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(searchButtonClicked))
-        
-        // 버튼 검정색이 안된다.. -> systemName으로 해야지 멍충아
-//        navigationItem.rightBarButtonItem?.tintColor = .black
-//        navigationController?.navigationBar.tintColor = .black
-//        navigationItem.titleView?.tintColor = .black
 
         view.addSubview(collectionView)
     }

@@ -74,6 +74,19 @@ class BookTableRepository: BookTableRepositoryType {
             print(error)
         }
     }
+ 
+    // print
+    func printURL() {
+        print(realm.configuration.fileURL!)
+    }
     
+    func checkSchemaVersion() {
+        do {
+            let version = try  schemaVersionAtURL(realm.configuration.fileURL!)
+            print("Scehma Version : \(version)")
+        } catch {
+            print(error)
+        }
+    }
 }
 

@@ -18,9 +18,11 @@ import RealmSwift
 
 class DetailViewController: BaseViewController {
     
+    // 이전 화면에서 받아올 데이터
     var data: BookTable?
     
-    let realm = try! Realm()
+    // repository pattern
+    let repository = BookTableRepository()
     
     let imageView = {
         let view = UIImageView()
@@ -75,33 +77,21 @@ class DetailViewController: BaseViewController {
     func modifyButtonClicked() {
         // 데이터 수정
         guard let data = data else { return }
-        print(data)
-        let item = BookTable(value: ["_id": data._id, "title": data.title, "contents": data.contents, "memo": memoTextFields.text!])
         
-        // 결과적으로, 다 넣어야 수정된다?
+        repository.updateItem(["_id": data._id, "title": data.title, "contents": data.contents, "memo": memoTextFields.text!])
         
-        
-        do {
-            try realm.write {
-                realm.add(item, update: .modified)
-            }
-        } catch {
-            print("")
-        }
         navigationController?.popViewController(animated: true)
-        print(data)
     }
     
     @objc
     func deleteButtonClicked() {
         // 사진 삭제 + 데이터 삭제
-        if let data {
-            removeImageFromDocument(fileName: "sub_\(data._id).jpg")
+        guard let data = data else { return }
+        
+        removeImageFromDocument(fileName: "sub_\(data._id).jpg")
 
-            try! realm.write {
-                realm.delete(data)
-            }
-        }
+        repository.deleteItem(data)
+    
         navigationController?.popViewController(animated: true)
     }
     

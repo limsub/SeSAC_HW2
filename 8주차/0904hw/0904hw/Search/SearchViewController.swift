@@ -13,6 +13,9 @@ class SearchViewController: BaseViewController {
     // 데이터
     var data: [Document] = []
     
+    // repository pattern
+    let repository = BookTableRepository()
+    
     
     // 인스턴스 (서치바, 테이블뷰(lazy var))
     lazy var searchBar = {
@@ -120,8 +123,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let realm = try! Realm()
-        
+
         let title = makeTitle(data[indexPath.row].title)
         let contents = makeContent(data[indexPath.row].authors, data[indexPath.row].price)
         let imageURL = data[indexPath.row].thumbnail ?? ""
@@ -129,9 +131,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         
         let task = BookTable(title: title, contents: contents, imageURL: imageURL)
         
-        try! realm.write {
-            realm.add(task)
-        }
+        repository.createItem(task)
         
         
         // 사진 파일 저장 (도큐먼트)
