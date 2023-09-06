@@ -42,6 +42,7 @@ class HomeViewController: BaseViewController {
         
         repository.printURL()
         repository.checkSchemaVersion()
+        print(tasks)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -111,7 +112,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         cell.titleLabel.text = data.title
         cell.contentLabel.text = data.contents
-        cell.memoLabel.text = data.memo
+        cell.memoLabel.text = data.memomemo
         
         
         /* ========== 이미지 다운로드 ========== */

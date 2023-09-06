@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,7 +14,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let config = Realm.Configuration(schemaVersion: 4) { migration, oldSchemaVersion in
+            if oldSchemaVersion < 1 { }    // add1 추가
+            
+            if oldSchemaVersion < 2 { }    // add1 제거
+            
+            if oldSchemaVersion < 3 {       // memo -> memomemo
+                migration.renameProperty(onType: BookTable.className(), from: "memo", to: "memomemo")
+            }
+            
+            if oldSchemaVersion < 4 {       // summary = title + contents
+                migration.enumerateObjects(ofType: BookTable.className()) { oldObject, newObject in
+                    
+                    guard let new = newObject else { return }
+                    guard let old = oldObject else { return }
+                    
+                    new["summary"] = "제목 : \(old["title"]), 내용 : \(old["contents"])"
+                }
+                
+            }
+            
+            
+        }
+        Realm.Configuration.defaultConfiguration = config
+        
         return true
     }
 

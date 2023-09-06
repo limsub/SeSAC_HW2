@@ -107,7 +107,7 @@ class DetailViewController: BaseViewController {
             imageView.image = loadImageFromDocument(fileName: "sub_\(data._id).jpg")
             titleLabel.text = data.title
             contentLabel.text = data.contents
-            memoTextFields.text = data.memo
+            memoTextFields.text = data.memomemo
         }
         
     }

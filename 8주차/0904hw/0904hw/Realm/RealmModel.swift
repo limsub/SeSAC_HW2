@@ -17,14 +17,19 @@ class BookTable: Object {
     @Persisted var contents: String?
     @Persisted var imageURL: String?
     
-    @Persisted var memo: String?
+    @Persisted var memomemo: String?    // 변경
+    @Persisted var summary: String?     // 결합 (title + contents)
+    
+//    @Persisted var add1: String?    // 추가   // 제거
     
     convenience init(title: String, contents: String, imageURL: String, memo: String = "") {
         self.init()
         self.title = title
         self.contents = contents
         self.imageURL = imageURL
-        self.memo = memo
+        self.memomemo = memo
+        
+        self.summary = title + contents
     }
     
 }
