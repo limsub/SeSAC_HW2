@@ -1,5 +1,12 @@
 # SeSAC_HW2
 
+## 9주차
+#### 0912hw
+- MVVM Practice (ViewModel 분리)
+    - Sample
+    - Photo
+    - Login
+
 ## 8주차
 #### 0904hw
 - Kakao Book Search API
@@ -93,6 +100,7 @@
     - UIButton TitleLabel & Image Vertical
     - New class for designing property
         - attributed placeholder
+    - MVVM practice (Observable)
 
 #### 0825hw
 - UIPageViewController Practice
