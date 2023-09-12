@@ -18,7 +18,6 @@ class LoginViewController: UIViewController {
         
         return label
     }()
-    
     let signUpButton = {
        let button = UIButton()
         
@@ -31,16 +30,19 @@ class LoginViewController: UIViewController {
         
         return button
     }()
-    
-    
     let emailTextField = LoginTextField(placeholer: "이메일을 입력하세요")
     let pwTextField = LoginTextField(placeholer: "비밀번호를 입력하세요")
     let nicknameTextField = LoginTextField(placeholer: "닉네임을 입력하세요")
     let locationTextField = LoginTextField(placeholer: "위치를 입력하세요")
     let recommentTextField = LoginTextField(placeholer: "추천 코드를 입력하세요")
+    
+    let viewModel = LoginViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
         
         view.backgroundColor = .black
 
@@ -49,6 +51,20 @@ class LoginViewController: UIViewController {
         }
         
         setLayout()
+        
+        
+        // 9/12
+        viewModel.isValid.bind { bool in
+            self.signUpButton.isEnabled = bool
+            self.changeButtonColor(bool)
+        }
+        emailTextField.addTarget(self, action: #selector(emailChanged), for: .editingChanged)
+        pwTextField.addTarget(self, action: #selector(pwChanged), for: .editingChanged)
+        nicknameTextField.addTarget(self, action: #selector(nicknameChanged), for: .editingChanged)
+        locationTextField.addTarget(self, action: #selector(locationChanged), for: .editingChanged)
+        recommentTextField.addTarget(self, action: #selector(recommentChanged), for: .editingChanged)
+        
+        signUpButton.addTarget(self, action: #selector(signUpButtonClicked), for: .touchUpInside)
     }
     
     func setLayout() {
@@ -114,4 +130,45 @@ class LoginViewController: UIViewController {
         
     }
 
+    // 9/12
+    func changeButtonColor(_ sender: Bool) {
+        if (sender) {
+            signUpButton.backgroundColor = .green
+            signUpButton.setTitleColor(.blue, for: .normal)
+        } else {
+            signUpButton.backgroundColor = .lightGray
+            signUpButton.setTitleColor(.white, for: .normal)
+        }
+    }
+    
+    @objc func emailChanged() {
+        viewModel.email = emailTextField.text!
+        viewModel.checkValidation()
+    }
+    @objc func pwChanged() {
+        viewModel.password = pwTextField.text!
+        viewModel.checkValidation()
+    }
+    @objc func nicknameChanged() {
+        viewModel.nickname = nicknameTextField.text!
+        viewModel.checkValidation()
+    }
+    @objc func locationChanged() {
+        viewModel.location = locationTextField.text!
+        viewModel.checkValidation()
+    }
+    @objc func recommentChanged() {
+        viewModel.code = recommentTextField.text!
+        viewModel.checkValidation()
+    }
+    
+    @objc func signUpButtonClicked() {
+        viewModel.signIn {
+            let alert = UIAlertController(title: "로그인 성공", message: "성공", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "확인", style: .default)
+            alert.addAction(ok)
+            self.present(alert, animated: true)
+        }
+    }
+    
 }

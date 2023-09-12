@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4831B39A2AB075690018D46C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831B3992AB075690018D46C /* LoginViewModel.swift */; };
+		4831B39C2AB077660018D46C /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831B39B2AB077660018D46C /* Observable.swift */; };
 		484900B52A974DA1007987D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484900B42A974DA1007987D8 /* AppDelegate.swift */; };
 		484900B72A974DA1007987D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484900B62A974DA1007987D8 /* SceneDelegate.swift */; };
 		484900B92A974DA1007987D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484900B82A974DA1007987D8 /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4831B3992AB075690018D46C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		4831B39B2AB077660018D46C /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		484900B12A974DA1007987D8 /* 0824hw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 0824hw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		484900B42A974DA1007987D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		484900B62A974DA1007987D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 				484900D52A976A58007987D8 /* Extension+UIButton.swift */,
 				484900D72A977D98007987D8 /* LoginViewController.swift */,
 				484900D92A977FD7007987D8 /* LoginTextField.swift */,
+				4831B3992AB075690018D46C /* LoginViewModel.swift */,
+				4831B39B2AB077660018D46C /* Observable.swift */,
 			);
 			path = JackFlix;
 			sourceTree = "<group>";
@@ -185,7 +191,9 @@
 			files = (
 				484900D82A977D98007987D8 /* LoginViewController.swift in Sources */,
 				484900D42A9766AD007987D8 /* MainViewController.swift in Sources */,
+				4831B39A2AB075690018D46C /* LoginViewModel.swift in Sources */,
 				484900CC2A974DE7007987D8 /* Test2ViewController.swift in Sources */,
+				4831B39C2AB077660018D46C /* Observable.swift in Sources */,
 				484900CA2A974DDE007987D8 /* Test1ViewController.swift in Sources */,
 				484900B92A974DA1007987D8 /* ViewController.swift in Sources */,
 				484900B52A974DA1007987D8 /* AppDelegate.swift in Sources */,
