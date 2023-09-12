@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PhotoViewController: UIViewController {
     
@@ -50,6 +51,8 @@ extension PhotoViewController: UITableViewDelegate, UITableViewDataSource {
         
         let data = viewModel.cellForRowsAt(at: indexPath)
         cell.textLabel?.text = data.id
+        
+        cell.imageView?.kf.setImage(with: URL(string: data.urls.thumb))
         
         return cell
     }
