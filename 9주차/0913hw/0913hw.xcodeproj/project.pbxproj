@@ -17,6 +17,9 @@
 		4831B3C92AB17D800018D46C /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831B3C82AB17D800018D46C /* Observable.swift */; };
 		4831B3CB2AB17E310018D46C /* CalculateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831B3CA2AB17E310018D46C /* CalculateViewModel.swift */; };
 		4831B3CD2AB17E390018D46C /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831B3CC2AB17E390018D46C /* CalculateViewController.swift */; };
+		4831B3D02AB1854B0018D46C /* LottoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831B3CF2AB1854B0018D46C /* LottoViewModel.swift */; };
+		4831B3D22AB185510018D46C /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831B3D12AB185510018D46C /* LottoViewController.swift */; };
+		4831B3D52AB188D60018D46C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4831B3D42AB188D60018D46C /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,8 @@
 		4831B3C82AB17D800018D46C /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		4831B3CA2AB17E310018D46C /* CalculateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewModel.swift; sourceTree = "<group>"; };
 		4831B3CC2AB17E390018D46C /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
+		4831B3CF2AB1854B0018D46C /* LottoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewModel.swift; sourceTree = "<group>"; };
+		4831B3D12AB185510018D46C /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +44,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4831B3C62AB17D6D0018D46C /* SnapKit in Frameworks */,
+				4831B3D52AB188D60018D46C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +96,8 @@
 		4831B3CE2AB184F40018D46C /* Lotto */ = {
 			isa = PBXGroup;
 			children = (
+				4831B3CF2AB1854B0018D46C /* LottoViewModel.swift */,
+				4831B3D12AB185510018D46C /* LottoViewController.swift */,
 			);
 			path = Lotto;
 			sourceTree = "<group>";
@@ -112,6 +120,7 @@
 			name = 0913hw;
 			packageProductDependencies = (
 				4831B3C52AB17D6D0018D46C /* SnapKit */,
+				4831B3D42AB188D60018D46C /* Alamofire */,
 			);
 			productName = 0913hw;
 			productReference = 4831B3AD2AB17D480018D46C /* 0913hw.app */;
@@ -143,6 +152,7 @@
 			mainGroup = 4831B3A42AB17D480018D46C;
 			packageReferences = (
 				4831B3C42AB17D6D0018D46C /* XCRemoteSwiftPackageReference "SnapKit" */,
+				4831B3D32AB188D60018D46C /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 4831B3AE2AB17D480018D46C /* Products */;
 			projectDirPath = "";
@@ -172,9 +182,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4831B3C92AB17D800018D46C /* Observable.swift in Sources */,
+				4831B3D02AB1854B0018D46C /* LottoViewModel.swift in Sources */,
 				4831B3B52AB17D480018D46C /* ViewController.swift in Sources */,
 				4831B3CB2AB17E310018D46C /* CalculateViewModel.swift in Sources */,
 				4831B3B12AB17D480018D46C /* AppDelegate.swift in Sources */,
+				4831B3D22AB185510018D46C /* LottoViewController.swift in Sources */,
 				4831B3B32AB17D480018D46C /* SceneDelegate.swift in Sources */,
 				4831B3CD2AB17E390018D46C /* CalculateViewController.swift in Sources */,
 			);
@@ -406,6 +418,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		4831B3D32AB188D60018D46C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -413,6 +433,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4831B3C42AB17D6D0018D46C /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		4831B3D42AB188D60018D46C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4831B3D32AB188D60018D46C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
