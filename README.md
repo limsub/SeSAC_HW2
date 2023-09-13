@@ -7,6 +7,11 @@
     - Photo
     - Login
 
+#### 0913hw
+- MVVM Practice
+    - Calculator
+    - Lotto
+
 ## 8주차
 #### 0904hw
 - Kakao Book Search API
