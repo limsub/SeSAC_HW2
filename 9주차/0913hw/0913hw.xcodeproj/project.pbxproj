@@ -64,6 +64,7 @@
 		4831B3AF2AB17D480018D46C /* 0913hw */ = {
 			isa = PBXGroup;
 			children = (
+				4831B3CE2AB184F40018D46C /* Lotto */,
 				4831B3C72AB17D770018D46C /* Calculate */,
 				4831B3B02AB17D480018D46C /* AppDelegate.swift */,
 				4831B3B22AB17D480018D46C /* SceneDelegate.swift */,
@@ -84,6 +85,13 @@
 				4831B3CC2AB17E390018D46C /* CalculateViewController.swift */,
 			);
 			path = Calculate;
+			sourceTree = "<group>";
+		};
+		4831B3CE2AB184F40018D46C /* Lotto */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lotto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
