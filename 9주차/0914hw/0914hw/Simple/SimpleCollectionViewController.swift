@@ -86,7 +86,7 @@ class SimpleCollectionViewController: UIViewController {
         setRegistration()
     }
     
-    func setRegistration() {
+    func setRegistration() { 
         cellRegistration = UICollectionView.CellRegistration(handler: { cell, indexPath, itemIdentifier in
             
             // content configuration
