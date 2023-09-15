@@ -10,10 +10,17 @@ import SnapKit
 
 class SimpleCollectionViewController: UIViewController {
     
-    let list = [
+    enum Section: Int, CaseIterable {
+        case first = 100
+        case second = 200
+    }
+    
+    let list1 = [
         User(name: "Hue", age: 23),
         User(name: "Jack", age: 21),
         User(name: "Bran", age: 20),
+    ]
+    let list2 = [
         User(name: "Kokojong", age: 20),
         User(name: "Hue", age: 23),
         User(name: "Jack", age: 21),
@@ -53,8 +60,12 @@ class SimpleCollectionViewController: UIViewController {
         User(name: "Kokojong", age: 20),
     ]
     
+    
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
-    var cellRegistration: UICollectionView.CellRegistration<UICollectionViewListCell, User>!
+    
+    var datasource: UICollectionViewDiffableDataSource<Section, User>!
+    
+//    var cellRegistration: UICollectionView.CellRegistration<UICollectionViewListCell, User>!
     
     static func layout() -> UICollectionViewLayout {
         var configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
@@ -68,9 +79,6 @@ class SimpleCollectionViewController: UIViewController {
     }
     
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -80,14 +88,19 @@ class SimpleCollectionViewController: UIViewController {
         collectionView.snp.makeConstraints { make in
             make.edges.equalTo(view.safeAreaLayoutGuide)
         }
-        collectionView.dataSource = self
-        collectionView.delegate = self
         
-        setRegistration()
+        configureDataSource()
+        
+        var snapshot = NSDiffableDataSourceSnapshot<Section, User>()
+        snapshot.appendSections(Section.allCases)
+        snapshot.appendItems(list1, toSection: Section.second)
+        snapshot.appendItems(list2, toSection: Section.first)
+        
+        datasource.apply(snapshot)
     }
     
-    func setRegistration() { 
-        cellRegistration = UICollectionView.CellRegistration(handler: { cell, indexPath, itemIdentifier in
+    private func configureDataSource() {
+        let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, User> (handler: { cell, indexPath, itemIdentifier in
             
             // content configuration
             var content = UIListContentConfiguration.valueCell()
@@ -118,22 +131,20 @@ class SimpleCollectionViewController: UIViewController {
             cell.backgroundConfiguration = backgroundConfig
         })
         
-    }
-}
-
-
-extension SimpleCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        list.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueConfiguredReusableCell(
-            using: cellRegistration,
-            for: indexPath,
-            item: list[indexPath.item]
+        datasource = UICollectionViewDiffableDataSource(
+            collectionView: collectionView,
+            cellProvider: { collectionView, indexPath, itemIdentifier in
+                let cell = collectionView.dequeueConfiguredReusableCell(
+                    using: cellRegistration,
+                    for: indexPath,
+                    item: itemIdentifier
+                )
+                
+                return cell
+            }
+            
+            
         )
         
-        return cell
     }
 }
