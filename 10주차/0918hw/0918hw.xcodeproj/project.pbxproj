@@ -20,6 +20,10 @@
 		487109852AB8186800173405 /* UserCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487109842AB8186800173405 /* UserCollectionViewModel.swift */; };
 		487109872AB819A400173405 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487109862AB819A400173405 /* Observable.swift */; };
 		4871098A2AB81C2A00173405 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 487109892AB81C2A00173405 /* SnapKit */; };
+		4871098D2AB8214500173405 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4871098C2AB8214500173405 /* Photo.swift */; };
+		4871098F2AB8214C00173405 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4871098E2AB8214C00173405 /* APIService.swift */; };
+		487109912AB8215200173405 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487109902AB8215200173405 /* PhotoViewController.swift */; };
+		487109932AB8215700173405 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487109922AB8215700173405 /* PhotoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,10 @@
 		487109822AB8186200173405 /* UserCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewController.swift; sourceTree = "<group>"; };
 		487109842AB8186800173405 /* UserCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewModel.swift; sourceTree = "<group>"; };
 		487109862AB819A400173405 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		4871098C2AB8214500173405 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		4871098E2AB8214C00173405 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		487109902AB8215200173405 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		487109922AB8215700173405 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,7 @@
 		487109632AB817D100173405 /* 0918hw */ = {
 			isa = PBXGroup;
 			children = (
+				4871098B2AB8214000173405 /* Photo */,
 				487109862AB819A400173405 /* Observable.swift */,
 				4871097F2AB8185600173405 /* User */,
 				487109642AB817D100173405 /* AppDelegate.swift */,
@@ -91,6 +100,17 @@
 				487109842AB8186800173405 /* UserCollectionViewModel.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		4871098B2AB8214000173405 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				4871098C2AB8214500173405 /* Photo.swift */,
+				4871098E2AB8214C00173405 /* APIService.swift */,
+				487109902AB8215200173405 /* PhotoViewController.swift */,
+				487109922AB8215700173405 /* PhotoViewModel.swift */,
+			);
+			path = Photo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,13 +194,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4871098D2AB8214500173405 /* Photo.swift in Sources */,
+				487109932AB8215700173405 /* PhotoViewModel.swift in Sources */,
 				487109812AB8185B00173405 /* User.swift in Sources */,
 				487109832AB8186200173405 /* UserCollectionViewController.swift in Sources */,
 				487109692AB817D100173405 /* ViewController.swift in Sources */,
 				487109872AB819A400173405 /* Observable.swift in Sources */,
 				487109852AB8186800173405 /* UserCollectionViewModel.swift in Sources */,
 				487109652AB817D100173405 /* AppDelegate.swift in Sources */,
+				4871098F2AB8214C00173405 /* APIService.swift in Sources */,
 				487109672AB817D100173405 /* SceneDelegate.swift in Sources */,
+				487109912AB8215200173405 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
