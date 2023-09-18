@@ -12,6 +12,13 @@
     - Calculator
     - Lotto
 
+#### 0914hw
+- Emoji Explorer Project
+    - Diffable DataSource + Section Snapshot
+    - Compositional Layout + List Configuration
+        - content configuration
+        - background configuration
+
 ## 8주차
 #### 0904hw
 - Kakao Book Search API

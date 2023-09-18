@@ -22,6 +22,7 @@
 		4831B4142AB325AA0018D46C /* EmojiExplorerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831B4132AB325AA0018D46C /* EmojiExplorerListViewController.swift */; };
 		4831B4162AB327810018D46C /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831B4152AB327810018D46C /* Emoji.swift */; };
 		4831B4182AB327E20018D46C /* EmojiDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831B4172AB327E20018D46C /* EmojiDetailViewController.swift */; };
+		487109332AB44AB300173405 /* EmojiExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487109322AB44AB300173405 /* EmojiExplorerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		4831B4132AB325AA0018D46C /* EmojiExplorerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiExplorerListViewController.swift; sourceTree = "<group>"; };
 		4831B4152AB327810018D46C /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		4831B4172AB327E20018D46C /* EmojiDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiDetailViewController.swift; sourceTree = "<group>"; };
+		487109322AB44AB300173405 /* EmojiExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiExplorerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				4831B4132AB325AA0018D46C /* EmojiExplorerListViewController.swift */,
 				4831B4152AB327810018D46C /* Emoji.swift */,
 				4831B4172AB327E20018D46C /* EmojiDetailViewController.swift */,
+				487109322AB44AB300173405 /* EmojiExplorerViewController.swift */,
 			);
 			path = EmojiExplorer;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				4831B4162AB327810018D46C /* Emoji.swift in Sources */,
 				4831B3F12AB312220018D46C /* SceneDelegate.swift in Sources */,
 				4831B4142AB325AA0018D46C /* EmojiExplorerListViewController.swift in Sources */,
+				487109332AB44AB300173405 /* EmojiExplorerViewController.swift in Sources */,
 				4831B40F2AB312BE0018D46C /* User.swift in Sources */,
 				4831B4112AB314D50018D46C /* SimpleCollectionViewController.swift in Sources */,
 				4831B40D2AB312880018D46C /* SimpleTableViewController.swift in Sources */,
