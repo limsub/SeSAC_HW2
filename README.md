@@ -1,5 +1,18 @@
 # SeSAC_HW2
 
+## 10주차
+#### 0918hw
+- MVVM + UICollectionView (modern)
+    - User & Photo project
+    - VC
+        - Section (enum)
+        - 인스턴스 (viewModel, dataSource, collectionView)
+        - 메서드 (createLayout, configureDataSource, updateSnapshot)
+        - extension 메서드 (didSelectItemAt, searchButtonClicked, ...)
+    - VM
+        - 데이터 인스턴스 (list)
+        - 메서드 (API call, list append/remove, ...)
+
 ## 9주차
 #### 0912hw
 - MVVM Practice (ViewModel 분리)
