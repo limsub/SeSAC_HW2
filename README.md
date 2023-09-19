@@ -15,13 +15,13 @@
 
 ## 9주차
 #### 0912hw
-- MVVM Practice (ViewModel 분리)
+- MVVM Practice (ViewController - ViewModel 분리)
     - Sample
     - Photo
     - Login
 
 #### 0913hw
-- MVVM Practice
+- MVVM Practice (ViewController - ViewModel 분리)
     - Calculator
     - Lotto
 
