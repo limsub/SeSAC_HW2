@@ -26,6 +26,7 @@
 		48710A212ABAD9F800173405 /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48710A202ABAD9F800173405 /* BeerViewController.swift */; };
 		48710A232ABADE6200173405 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48710A222ABADE6200173405 /* Network.swift */; };
 		48710A252ABAF53400173405 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48710A242ABAF53400173405 /* Router.swift */; };
+		48710A272ABAFF5200173405 /* NetworkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48710A262ABAFF5200173405 /* NetworkViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		48710A202ABAD9F800173405 /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
 		48710A222ABADE6200173405 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		48710A242ABAF53400173405 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		48710A262ABAFF5200173405 /* NetworkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				48710A192ABAC4BB00173405 /* SeSACAPI.swift */,
 				48710A222ABADE6200173405 /* Network.swift */,
 				48710A242ABAF53400173405 /* Router.swift */,
+				48710A262ABAFF5200173405 /* NetworkViewModel.swift */,
 			);
 			path = NetworkPractice;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				48710A232ABADE6200173405 /* Network.swift in Sources */,
 				48710A112ABABB2000173405 /* NetworkBasic.swift in Sources */,
 				48710A1A2ABAC4BB00173405 /* SeSACAPI.swift in Sources */,
+				48710A272ABAFF5200173405 /* NetworkViewModel.swift in Sources */,
 				48710A212ABAD9F800173405 /* BeerViewController.swift in Sources */,
 				487109F32ABABA2500173405 /* AppDelegate.swift in Sources */,
 				487109F52ABABA2500173405 /* SceneDelegate.swift in Sources */,
