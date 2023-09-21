@@ -13,6 +13,29 @@
         - 데이터 인스턴스 (list)
         - 메서드 (API call, list append/remove, ...)
 
+#### 0920hw
+- 네트워크 코드 추상화
+    - Singleton pattern
+    - API Enum
+    - Result Type
+    - Error Enum
+    - Generic 이용해서 메서드 통합
+    - Router Pattern (URLRequestConvertible)
+- MVVM
+    - VM과 VC 역할 분리
+        1. VM 메서드의 매개변수에 completionHandler로 동작 설정
+        2. VM 프로퍼티를 Observable로 선언 후 listener에 동작 설정
+        3. 한번 더 Enum으로 캡슐화하여 VM의 메서드에 직접 접근하지 못하도록 설정
+
+
+#### 0921hw
+- 네트워크 코드 추상화 + MVVM + UICollectionView Practice 
+    - Punk API (Beers, Single Beer, Random Beer)
+    - Router Pattern, requestConvertible, Observable
+    - Diffable DataSource, Custom Cell 사용
+
+<br>
+
 ## 9주차
 #### 0912hw
 - MVVM Practice (ViewController - ViewModel 분리)
@@ -31,6 +54,8 @@
     - Compositional Layout + List Configuration
         - content configuration
         - background configuration
+
+<br>
 
 ## 8주차
 #### 0904hw
@@ -59,7 +84,7 @@
         - Manually Migration
 
 
-
+<br>
 
 ## 7주차
 #### 0828hw

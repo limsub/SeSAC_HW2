@@ -64,6 +64,7 @@ class NetworkViewController: UIViewController {
 //        viewModel.data.bind { data in
 //            print("hi")
 //            let url = URL(string: "")!
+//            
 //
 //            self.imageView.kf.setImage(with: data)
 //            self.imageView.kf.setImage(with: <#T##Source?#>)

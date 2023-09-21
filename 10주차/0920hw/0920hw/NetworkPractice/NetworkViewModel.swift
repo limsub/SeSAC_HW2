@@ -11,7 +11,7 @@ class NetworkViewModel {
     
     var url = Observable(URL(string: ""))
     
-//    var data = Observable(Data())
+    var data = Observable(Data())
     
     func requestRandom() {
         
@@ -21,7 +21,7 @@ class NetworkViewModel {
                 dump(success)
                 self.url.value = URL(string: success.urls.thumb)!
                 
-//                self.data.value = try! Data(contentsOf: URL(string: success.urls.thumb)!)
+                self.data.value = try! Data(contentsOf: URL(string: success.urls.thumb)!)
                 
             case .failure(let failure):
                 print(failure.errorDescription)
