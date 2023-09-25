@@ -2,7 +2,7 @@
 
 ## 10주차
 #### 0918hw
-- MVVM + UICollectionView (modern)
+- MVVM + UICollectionView (modern)]
     - User & Photo project
     - VC
         - Section (enum)
